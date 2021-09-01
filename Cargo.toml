@@ -8,9 +8,7 @@ keywords = ["arm", "cortex-m", "w7500", "w7500P", "wiznet", "svd2rust"]
 categories = ["embedded", "hardware-support", "no-std"]
 license = "MIT"
 repository = "https://github.com/GPTechinno/W7500x"
-include = ["Cargo.toml", "**/*.rs", "W7500x.svd", "README.md", "LICENSE", "device.x"]
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+include = ["Cargo.toml", "**/*.rs", "generate.sh", "W7500x.svd", "README.md", "LICENSE", "device.x"]
 
 [dependencies]
 cortex-m = "0.7"
