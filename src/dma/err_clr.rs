@@ -49,8 +49,9 @@ impl From<ERR_CLR_A> for bool {
     }
 }
 #[doc = "Field `ERR_CLR` reader - Returns the status of DMA_ERR, or set the signal LOW"]
-pub struct ERR_CLR_R(crate::FieldReader<bool, ERR_CLR_A>);
+pub struct ERR_CLR_R(crate::FieldReader<bool>);
 impl ERR_CLR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ERR_CLR_R(crate::FieldReader::new(bits))
     }
@@ -74,7 +75,7 @@ impl ERR_CLR_R {
     }
 }
 impl core::ops::Deref for ERR_CLR_R {
-    type Target = crate::FieldReader<bool, ERR_CLR_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -113,7 +114,7 @@ impl<'a> ERR_CLR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -121,7 +122,7 @@ impl R {
     #[doc = "Bit 0 - Returns the status of DMA_ERR, or set the signal LOW"]
     #[inline(always)]
     pub fn err_clr(&self) -> ERR_CLR_R {
-        ERR_CLR_R::new((self.bits & 0x01) != 0)
+        ERR_CLR_R::new((self.bits & 1) != 0)
     }
 }
 impl W {

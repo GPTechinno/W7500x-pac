@@ -54,8 +54,9 @@ impl From<RTCHS_A> for u8 {
     }
 }
 #[doc = "Field `RTCHS` reader - RTC High Speed source select bits"]
-pub struct RTCHS_R(crate::FieldReader<u8, RTCHS_A>);
+pub struct RTCHS_R(crate::FieldReader<u8>);
 impl RTCHS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         RTCHS_R(crate::FieldReader::new(bits))
     }
@@ -92,7 +93,7 @@ impl RTCHS_R {
     }
 }
 impl core::ops::Deref for RTCHS_R {
-    type Target = crate::FieldReader<u8, RTCHS_A>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -131,7 +132,7 @@ impl<'a> RTCHS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03) | (value as u32 & 0x03);
+        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
         self.w
     }
 }
@@ -139,7 +140,7 @@ impl R {
     #[doc = "Bits 0:1 - RTC High Speed source select bits"]
     #[inline(always)]
     pub fn rtchs(&self) -> RTCHS_R {
-        RTCHS_R::new((self.bits & 0x03) as u8)
+        RTCHS_R::new((self.bits & 3) as u8)
     }
 }
 impl W {

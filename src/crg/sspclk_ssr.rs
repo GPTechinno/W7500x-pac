@@ -54,8 +54,9 @@ impl From<SSPCSS_A> for u8 {
     }
 }
 #[doc = "Field `SSPCSS` reader - SSPCLK source select bits"]
-pub struct SSPCSS_R(crate::FieldReader<u8, SSPCSS_A>);
+pub struct SSPCSS_R(crate::FieldReader<u8>);
 impl SSPCSS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         SSPCSS_R(crate::FieldReader::new(bits))
     }
@@ -92,7 +93,7 @@ impl SSPCSS_R {
     }
 }
 impl core::ops::Deref for SSPCSS_R {
-    type Target = crate::FieldReader<u8, SSPCSS_A>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -131,7 +132,7 @@ impl<'a> SSPCSS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03) | (value as u32 & 0x03);
+        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
         self.w
     }
 }
@@ -139,7 +140,7 @@ impl R {
     #[doc = "Bits 0:1 - SSPCLK source select bits"]
     #[inline(always)]
     pub fn sspcss(&self) -> SSPCSS_R {
-        SSPCSS_R::new((self.bits & 0x03) as u8)
+        SSPCSS_R::new((self.bits & 3) as u8)
     }
 }
 impl W {

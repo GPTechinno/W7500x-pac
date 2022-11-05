@@ -47,8 +47,9 @@ impl From<RTCALF_A> for bool {
     }
 }
 #[doc = "Field `RTCALF` reader - RTC Alarm interrupt pending flag"]
-pub struct RTCALF_R(crate::FieldReader<bool, RTCALF_A>);
+pub struct RTCALF_R(crate::FieldReader<bool>);
 impl RTCALF_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RTCALF_R(crate::FieldReader::new(bits))
     }
@@ -67,7 +68,7 @@ impl RTCALF_R {
     }
 }
 impl core::ops::Deref for RTCALF_R {
-    type Target = crate::FieldReader<bool, RTCALF_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -101,7 +102,7 @@ impl<'a> RTCALF_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -118,8 +119,9 @@ impl From<RTCCIF_A> for bool {
     }
 }
 #[doc = "Field `RTCCIF` reader - RTC Counter Interrupt pending flag"]
-pub struct RTCCIF_R(crate::FieldReader<bool, RTCCIF_A>);
+pub struct RTCCIF_R(crate::FieldReader<bool>);
 impl RTCCIF_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RTCCIF_R(crate::FieldReader::new(bits))
     }
@@ -138,7 +140,7 @@ impl RTCCIF_R {
     }
 }
 impl core::ops::Deref for RTCCIF_R {
-    type Target = crate::FieldReader<bool, RTCCIF_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -172,7 +174,7 @@ impl<'a> RTCCIF_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -180,12 +182,12 @@ impl R {
     #[doc = "Bit 1 - RTC Alarm interrupt pending flag"]
     #[inline(always)]
     pub fn rtcalf(&self) -> RTCALF_R {
-        RTCALF_R::new(((self.bits >> 1) & 0x01) != 0)
+        RTCALF_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 0 - RTC Counter Interrupt pending flag"]
     #[inline(always)]
     pub fn rtccif(&self) -> RTCCIF_R {
-        RTCCIF_R::new((self.bits & 0x01) != 0)
+        RTCCIF_R::new((self.bits & 1) != 0)
     }
 }
 impl W {

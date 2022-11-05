@@ -36,14 +36,15 @@ impl From<crate::W<BCDMON_SPEC>> for W {
 }
 #[doc = "Field `BCDMON` reader - BCDMON\\[4:0\\]
 bits (RTC Month value (1 to 12))"]
-pub struct BCDMON_R(crate::FieldReader<u8, u8>);
+pub struct BCDMON_R(crate::FieldReader<u8>);
 impl BCDMON_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         BCDMON_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for BCDMON_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

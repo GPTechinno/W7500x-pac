@@ -35,14 +35,15 @@ impl From<crate::W<CONTROL_SPEC>> for W {
     }
 }
 #[doc = "Field `TE` reader - Timer Enable"]
-pub struct TE_R(crate::FieldReader<bool, bool>);
+pub struct TE_R(crate::FieldReader<bool>);
 impl TE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TE_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for TE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -66,19 +67,20 @@ impl<'a> TE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
 #[doc = "Field `TM` reader - Timer Mode"]
-pub struct TM_R(crate::FieldReader<bool, bool>);
+pub struct TM_R(crate::FieldReader<bool>);
 impl TM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TM_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for TM_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -102,19 +104,20 @@ impl<'a> TM_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
 #[doc = "Field `IE` reader - Interrupt Enable"]
-pub struct IE_R(crate::FieldReader<bool, bool>);
+pub struct IE_R(crate::FieldReader<bool>);
 impl IE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         IE_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for IE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -138,19 +141,20 @@ impl<'a> IE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
 #[doc = "Field `TP` reader - Timer Prescale"]
-pub struct TP_R(crate::FieldReader<u8, u8>);
+pub struct TP_R(crate::FieldReader<u8>);
 impl TP_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         TP_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for TP_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -164,19 +168,20 @@ impl<'a> TP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 2)) | ((value as u32 & 0x03) << 2);
+        self.w.bits = (self.w.bits & !(3 << 2)) | ((value as u32 & 3) << 2);
         self.w
     }
 }
 #[doc = "Field `TS` reader - Timer Size"]
-pub struct TS_R(crate::FieldReader<bool, bool>);
+pub struct TS_R(crate::FieldReader<bool>);
 impl TS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TS_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for TS_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -200,19 +205,20 @@ impl<'a> TS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
 #[doc = "Field `OC` reader - One-shot Count"]
-pub struct OC_R(crate::FieldReader<bool, bool>);
+pub struct OC_R(crate::FieldReader<bool>);
 impl OC_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         OC_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for OC_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -236,7 +242,7 @@ impl<'a> OC_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -244,32 +250,32 @@ impl R {
     #[doc = "Bit 7 - Timer Enable"]
     #[inline(always)]
     pub fn te(&self) -> TE_R {
-        TE_R::new(((self.bits >> 7) & 0x01) != 0)
+        TE_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 6 - Timer Mode"]
     #[inline(always)]
     pub fn tm(&self) -> TM_R {
-        TM_R::new(((self.bits >> 6) & 0x01) != 0)
+        TM_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 5 - Interrupt Enable"]
     #[inline(always)]
     pub fn ie(&self) -> IE_R {
-        IE_R::new(((self.bits >> 5) & 0x01) != 0)
+        IE_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bits 2:3 - Timer Prescale"]
     #[inline(always)]
     pub fn tp(&self) -> TP_R {
-        TP_R::new(((self.bits >> 2) & 0x03) as u8)
+        TP_R::new(((self.bits >> 2) & 3) as u8)
     }
     #[doc = "Bit 1 - Timer Size"]
     #[inline(always)]
     pub fn ts(&self) -> TS_R {
-        TS_R::new(((self.bits >> 1) & 0x01) != 0)
+        TS_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 0 - One-shot Count"]
     #[inline(always)]
     pub fn oc(&self) -> OC_R {
-        OC_R::new((self.bits & 0x01) != 0)
+        OC_R::new((self.bits & 1) != 0)
     }
 }
 impl W {

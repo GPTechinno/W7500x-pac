@@ -35,14 +35,15 @@ impl From<crate::W<MIS_SPEC>> for W {
     }
 }
 #[doc = "Field `TXMIS` reader - Transmit FIFO masked interrupt status"]
-pub struct TXMIS_R(crate::FieldReader<bool, bool>);
+pub struct TXMIS_R(crate::FieldReader<bool>);
 impl TXMIS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TXMIS_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for TXMIS_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -66,19 +67,20 @@ impl<'a> TXMIS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
 #[doc = "Field `RXMIS` reader - Receive FIFO masked interrupt status"]
-pub struct RXMIS_R(crate::FieldReader<bool, bool>);
+pub struct RXMIS_R(crate::FieldReader<bool>);
 impl RXMIS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RXMIS_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for RXMIS_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -102,19 +104,20 @@ impl<'a> RXMIS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
 #[doc = "Field `RTMIS` reader - Receive timeout masked interrupt status"]
-pub struct RTMIS_R(crate::FieldReader<bool, bool>);
+pub struct RTMIS_R(crate::FieldReader<bool>);
 impl RTMIS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RTMIS_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for RTMIS_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -138,19 +141,20 @@ impl<'a> RTMIS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
 #[doc = "Field `RORMIS` reader - Receive overrun masked interrupt status"]
-pub struct RORMIS_R(crate::FieldReader<bool, bool>);
+pub struct RORMIS_R(crate::FieldReader<bool>);
 impl RORMIS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RORMIS_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for RORMIS_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -174,7 +178,7 @@ impl<'a> RORMIS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -182,22 +186,22 @@ impl R {
     #[doc = "Bit 3 - Transmit FIFO masked interrupt status"]
     #[inline(always)]
     pub fn txmis(&self) -> TXMIS_R {
-        TXMIS_R::new(((self.bits >> 3) & 0x01) != 0)
+        TXMIS_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 2 - Receive FIFO masked interrupt status"]
     #[inline(always)]
     pub fn rxmis(&self) -> RXMIS_R {
-        RXMIS_R::new(((self.bits >> 2) & 0x01) != 0)
+        RXMIS_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 1 - Receive timeout masked interrupt status"]
     #[inline(always)]
     pub fn rtmis(&self) -> RTMIS_R {
-        RTMIS_R::new(((self.bits >> 1) & 0x01) != 0)
+        RTMIS_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 0 - Receive overrun masked interrupt status"]
     #[inline(always)]
     pub fn rormis(&self) -> RORMIS_R {
-        RORMIS_R::new((self.bits & 0x01) != 0)
+        RORMIS_R::new((self.bits & 1) != 0)
     }
 }
 impl W {

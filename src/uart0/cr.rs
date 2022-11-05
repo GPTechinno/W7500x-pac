@@ -49,8 +49,9 @@ impl From<CTSEN_A> for bool {
     }
 }
 #[doc = "Field `CTSEn` reader - CTS hardware flow control enable"]
-pub struct CTSEN_R(crate::FieldReader<bool, CTSEN_A>);
+pub struct CTSEN_R(crate::FieldReader<bool>);
 impl CTSEN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CTSEN_R(crate::FieldReader::new(bits))
     }
@@ -74,7 +75,7 @@ impl CTSEN_R {
     }
 }
 impl core::ops::Deref for CTSEN_R {
-    type Target = crate::FieldReader<bool, CTSEN_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -113,7 +114,7 @@ impl<'a> CTSEN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u32 & 0x01) << 15);
+        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
         self.w
     }
 }
@@ -132,8 +133,9 @@ impl From<RTSEN_A> for bool {
     }
 }
 #[doc = "Field `RTSEn` reader - RTS hardware flow control enable"]
-pub struct RTSEN_R(crate::FieldReader<bool, RTSEN_A>);
+pub struct RTSEN_R(crate::FieldReader<bool>);
 impl RTSEN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RTSEN_R(crate::FieldReader::new(bits))
     }
@@ -157,7 +159,7 @@ impl RTSEN_R {
     }
 }
 impl core::ops::Deref for RTSEN_R {
-    type Target = crate::FieldReader<bool, RTSEN_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -196,7 +198,7 @@ impl<'a> RTSEN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | ((value as u32 & 0x01) << 14);
+        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
         self.w
     }
 }
@@ -215,8 +217,9 @@ impl From<OUT2_A> for bool {
     }
 }
 #[doc = "Field `Out2` reader - Complement of Out2 modem status output"]
-pub struct OUT2_R(crate::FieldReader<bool, OUT2_A>);
+pub struct OUT2_R(crate::FieldReader<bool>);
 impl OUT2_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         OUT2_R(crate::FieldReader::new(bits))
     }
@@ -240,7 +243,7 @@ impl OUT2_R {
     }
 }
 impl core::ops::Deref for OUT2_R {
-    type Target = crate::FieldReader<bool, OUT2_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -279,7 +282,7 @@ impl<'a> OUT2_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
         self.w
     }
 }
@@ -298,8 +301,9 @@ impl From<OUT1_A> for bool {
     }
 }
 #[doc = "Field `Out1` reader - Complement of Out1 modem status output"]
-pub struct OUT1_R(crate::FieldReader<bool, OUT1_A>);
+pub struct OUT1_R(crate::FieldReader<bool>);
 impl OUT1_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         OUT1_R(crate::FieldReader::new(bits))
     }
@@ -323,7 +327,7 @@ impl OUT1_R {
     }
 }
 impl core::ops::Deref for OUT1_R {
-    type Target = crate::FieldReader<bool, OUT1_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -362,7 +366,7 @@ impl<'a> OUT1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -381,8 +385,9 @@ impl From<RTS_A> for bool {
     }
 }
 #[doc = "Field `RTS` reader - Request to send"]
-pub struct RTS_R(crate::FieldReader<bool, RTS_A>);
+pub struct RTS_R(crate::FieldReader<bool>);
 impl RTS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RTS_R(crate::FieldReader::new(bits))
     }
@@ -406,7 +411,7 @@ impl RTS_R {
     }
 }
 impl core::ops::Deref for RTS_R {
-    type Target = crate::FieldReader<bool, RTS_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -445,7 +450,7 @@ impl<'a> RTS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
         self.w
     }
 }
@@ -464,8 +469,9 @@ impl From<DTR_A> for bool {
     }
 }
 #[doc = "Field `DTR` reader - Data transmit ready"]
-pub struct DTR_R(crate::FieldReader<bool, DTR_A>);
+pub struct DTR_R(crate::FieldReader<bool>);
 impl DTR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         DTR_R(crate::FieldReader::new(bits))
     }
@@ -489,7 +495,7 @@ impl DTR_R {
     }
 }
 impl core::ops::Deref for DTR_R {
-    type Target = crate::FieldReader<bool, DTR_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -528,7 +534,7 @@ impl<'a> DTR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -547,8 +553,9 @@ impl From<RXE_A> for bool {
     }
 }
 #[doc = "Field `RXE` reader - Receive enable"]
-pub struct RXE_R(crate::FieldReader<bool, RXE_A>);
+pub struct RXE_R(crate::FieldReader<bool>);
 impl RXE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RXE_R(crate::FieldReader::new(bits))
     }
@@ -572,7 +579,7 @@ impl RXE_R {
     }
 }
 impl core::ops::Deref for RXE_R {
-    type Target = crate::FieldReader<bool, RXE_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -611,7 +618,7 @@ impl<'a> RXE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -630,8 +637,9 @@ impl From<TXE_A> for bool {
     }
 }
 #[doc = "Field `TXE` reader - Transmit enable"]
-pub struct TXE_R(crate::FieldReader<bool, TXE_A>);
+pub struct TXE_R(crate::FieldReader<bool>);
 impl TXE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TXE_R(crate::FieldReader::new(bits))
     }
@@ -655,7 +663,7 @@ impl TXE_R {
     }
 }
 impl core::ops::Deref for TXE_R {
-    type Target = crate::FieldReader<bool, TXE_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -694,7 +702,7 @@ impl<'a> TXE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -713,8 +721,9 @@ impl From<SIRLP_A> for bool {
     }
 }
 #[doc = "Field `SIRLP` reader - IrDA SIR low power mode"]
-pub struct SIRLP_R(crate::FieldReader<bool, SIRLP_A>);
+pub struct SIRLP_R(crate::FieldReader<bool>);
 impl SIRLP_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SIRLP_R(crate::FieldReader::new(bits))
     }
@@ -738,7 +747,7 @@ impl SIRLP_R {
     }
 }
 impl core::ops::Deref for SIRLP_R {
-    type Target = crate::FieldReader<bool, SIRLP_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -777,7 +786,7 @@ impl<'a> SIRLP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -796,8 +805,9 @@ impl From<SIREN_A> for bool {
     }
 }
 #[doc = "Field `SIREN` reader - SIR enable"]
-pub struct SIREN_R(crate::FieldReader<bool, SIREN_A>);
+pub struct SIREN_R(crate::FieldReader<bool>);
 impl SIREN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SIREN_R(crate::FieldReader::new(bits))
     }
@@ -821,7 +831,7 @@ impl SIREN_R {
     }
 }
 impl core::ops::Deref for SIREN_R {
-    type Target = crate::FieldReader<bool, SIREN_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -860,7 +870,7 @@ impl<'a> SIREN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -879,8 +889,9 @@ impl From<UARTEN_A> for bool {
     }
 }
 #[doc = "Field `UARTEN` reader - UART enable"]
-pub struct UARTEN_R(crate::FieldReader<bool, UARTEN_A>);
+pub struct UARTEN_R(crate::FieldReader<bool>);
 impl UARTEN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         UARTEN_R(crate::FieldReader::new(bits))
     }
@@ -904,7 +915,7 @@ impl UARTEN_R {
     }
 }
 impl core::ops::Deref for UARTEN_R {
-    type Target = crate::FieldReader<bool, UARTEN_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -943,7 +954,7 @@ impl<'a> UARTEN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -951,57 +962,57 @@ impl R {
     #[doc = "Bit 15 - CTS hardware flow control enable"]
     #[inline(always)]
     pub fn ctsen(&self) -> CTSEN_R {
-        CTSEN_R::new(((self.bits >> 15) & 0x01) != 0)
+        CTSEN_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 14 - RTS hardware flow control enable"]
     #[inline(always)]
     pub fn rtsen(&self) -> RTSEN_R {
-        RTSEN_R::new(((self.bits >> 14) & 0x01) != 0)
+        RTSEN_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 13 - Complement of Out2 modem status output"]
     #[inline(always)]
     pub fn out2(&self) -> OUT2_R {
-        OUT2_R::new(((self.bits >> 13) & 0x01) != 0)
+        OUT2_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 12 - Complement of Out1 modem status output"]
     #[inline(always)]
     pub fn out1(&self) -> OUT1_R {
-        OUT1_R::new(((self.bits >> 12) & 0x01) != 0)
+        OUT1_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 11 - Request to send"]
     #[inline(always)]
     pub fn rts(&self) -> RTS_R {
-        RTS_R::new(((self.bits >> 11) & 0x01) != 0)
+        RTS_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 10 - Data transmit ready"]
     #[inline(always)]
     pub fn dtr(&self) -> DTR_R {
-        DTR_R::new(((self.bits >> 10) & 0x01) != 0)
+        DTR_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 9 - Receive enable"]
     #[inline(always)]
     pub fn rxe(&self) -> RXE_R {
-        RXE_R::new(((self.bits >> 9) & 0x01) != 0)
+        RXE_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 8 - Transmit enable"]
     #[inline(always)]
     pub fn txe(&self) -> TXE_R {
-        TXE_R::new(((self.bits >> 8) & 0x01) != 0)
+        TXE_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 2 - IrDA SIR low power mode"]
     #[inline(always)]
     pub fn sirlp(&self) -> SIRLP_R {
-        SIRLP_R::new(((self.bits >> 2) & 0x01) != 0)
+        SIRLP_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 1 - SIR enable"]
     #[inline(always)]
     pub fn siren(&self) -> SIREN_R {
-        SIREN_R::new(((self.bits >> 1) & 0x01) != 0)
+        SIREN_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 0 - UART enable"]
     #[inline(always)]
     pub fn uarten(&self) -> UARTEN_R {
-        UARTEN_R::new((self.bits & 0x01) != 0)
+        UARTEN_R::new((self.bits & 1) != 0)
     }
 }
 impl W {

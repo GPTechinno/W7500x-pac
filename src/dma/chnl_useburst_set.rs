@@ -37,14 +37,15 @@ impl From<crate::W<CHNL_USEBURST_SET_SPEC>> for W {
 #[doc = "Field `CHNL_USEBURST_SET` reader - CHNL_USEBURST_SET\\[5:0\\]
 bits (Returns the useburst status, or disable dma_sreq\\[Channel-1\\]
 form generating DMA requests)"]
-pub struct CHNL_USEBURST_SET_R(crate::FieldReader<u8, u8>);
+pub struct CHNL_USEBURST_SET_R(crate::FieldReader<u8>);
 impl CHNL_USEBURST_SET_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         CHNL_USEBURST_SET_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for CHNL_USEBURST_SET_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

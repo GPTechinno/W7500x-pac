@@ -35,14 +35,15 @@ impl From<crate::W<DR_SPEC>> for W {
     }
 }
 #[doc = "Field `DATA` reader - Receive (READ)/Transmit (WRITE) data"]
-pub struct DATA_R(crate::FieldReader<u8, u8>);
+pub struct DATA_R(crate::FieldReader<u8>);
 impl DATA_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         DATA_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for DATA_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

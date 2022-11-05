@@ -62,8 +62,9 @@ impl From<WDPRE_A> for u8 {
     }
 }
 #[doc = "Field `WDPRE` reader - WDOGCLK High Speed prescale value select bits"]
-pub struct WDPRE_R(crate::FieldReader<u8, WDPRE_A>);
+pub struct WDPRE_R(crate::FieldReader<u8>);
 impl WDPRE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         WDPRE_R(crate::FieldReader::new(bits))
     }
@@ -124,7 +125,7 @@ impl WDPRE_R {
     }
 }
 impl core::ops::Deref for WDPRE_R {
-    type Target = crate::FieldReader<u8, WDPRE_A>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +184,7 @@ impl<'a> WDPRE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x07) | (value as u32 & 0x07);
+        self.w.bits = (self.w.bits & !7) | (value as u32 & 7);
         self.w
     }
 }
@@ -191,7 +192,7 @@ impl R {
     #[doc = "Bits 0:2 - WDOGCLK High Speed prescale value select bits"]
     #[inline(always)]
     pub fn wdpre(&self) -> WDPRE_R {
-        WDPRE_R::new((self.bits & 0x07) as u8)
+        WDPRE_R::new((self.bits & 7) as u8)
     }
 }
 impl W {

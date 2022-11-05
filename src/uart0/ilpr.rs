@@ -35,14 +35,15 @@ impl From<crate::W<ILPR_SPEC>> for W {
     }
 }
 #[doc = "Field `ILPDVSR` reader - low-power divisor value"]
-pub struct ILPDVSR_R(crate::FieldReader<u8, u8>);
+pub struct ILPDVSR_R(crate::FieldReader<u8>);
 impl ILPDVSR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         ILPDVSR_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for ILPDVSR_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

@@ -49,8 +49,9 @@ impl From<AINT_A> for bool {
     }
 }
 #[doc = "Field `AINT` reader - RTC Alarm Interrupt Enable"]
-pub struct AINT_R(crate::FieldReader<bool, AINT_A>);
+pub struct AINT_R(crate::FieldReader<bool>);
 impl AINT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         AINT_R(crate::FieldReader::new(bits))
     }
@@ -74,7 +75,7 @@ impl AINT_R {
     }
 }
 impl core::ops::Deref for AINT_R {
-    type Target = crate::FieldReader<bool, AINT_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -113,7 +114,7 @@ impl<'a> AINT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -132,8 +133,9 @@ impl From<IMMON_A> for bool {
     }
 }
 #[doc = "Field `IMMON` reader - RTC Month Interrupt Enable"]
-pub struct IMMON_R(crate::FieldReader<bool, IMMON_A>);
+pub struct IMMON_R(crate::FieldReader<bool>);
 impl IMMON_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         IMMON_R(crate::FieldReader::new(bits))
     }
@@ -157,7 +159,7 @@ impl IMMON_R {
     }
 }
 impl core::ops::Deref for IMMON_R {
-    type Target = crate::FieldReader<bool, IMMON_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -196,7 +198,7 @@ impl<'a> IMMON_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -215,8 +217,9 @@ impl From<IMDAY_A> for bool {
     }
 }
 #[doc = "Field `IMDAY` reader - RTC Day Interrupt Enable"]
-pub struct IMDAY_R(crate::FieldReader<bool, IMDAY_A>);
+pub struct IMDAY_R(crate::FieldReader<bool>);
 impl IMDAY_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         IMDAY_R(crate::FieldReader::new(bits))
     }
@@ -240,7 +243,7 @@ impl IMDAY_R {
     }
 }
 impl core::ops::Deref for IMDAY_R {
-    type Target = crate::FieldReader<bool, IMDAY_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -279,7 +282,7 @@ impl<'a> IMDAY_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -298,8 +301,9 @@ impl From<IMDATE_A> for bool {
     }
 }
 #[doc = "Field `IMDATE` reader - RTC Date Interrupt Enable"]
-pub struct IMDATE_R(crate::FieldReader<bool, IMDATE_A>);
+pub struct IMDATE_R(crate::FieldReader<bool>);
 impl IMDATE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         IMDATE_R(crate::FieldReader::new(bits))
     }
@@ -323,7 +327,7 @@ impl IMDATE_R {
     }
 }
 impl core::ops::Deref for IMDATE_R {
-    type Target = crate::FieldReader<bool, IMDATE_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -362,7 +366,7 @@ impl<'a> IMDATE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -381,8 +385,9 @@ impl From<IMHOUR_A> for bool {
     }
 }
 #[doc = "Field `IMHOUR` reader - RTC Hour Interrupt Enable"]
-pub struct IMHOUR_R(crate::FieldReader<bool, IMHOUR_A>);
+pub struct IMHOUR_R(crate::FieldReader<bool>);
 impl IMHOUR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         IMHOUR_R(crate::FieldReader::new(bits))
     }
@@ -406,7 +411,7 @@ impl IMHOUR_R {
     }
 }
 impl core::ops::Deref for IMHOUR_R {
-    type Target = crate::FieldReader<bool, IMHOUR_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -445,7 +450,7 @@ impl<'a> IMHOUR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -464,8 +469,9 @@ impl From<IMMIN_A> for bool {
     }
 }
 #[doc = "Field `IMMIN` reader - RTC Minute Interrupt Enable"]
-pub struct IMMIN_R(crate::FieldReader<bool, IMMIN_A>);
+pub struct IMMIN_R(crate::FieldReader<bool>);
 impl IMMIN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         IMMIN_R(crate::FieldReader::new(bits))
     }
@@ -489,7 +495,7 @@ impl IMMIN_R {
     }
 }
 impl core::ops::Deref for IMMIN_R {
-    type Target = crate::FieldReader<bool, IMMIN_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -528,7 +534,7 @@ impl<'a> IMMIN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -547,8 +553,9 @@ impl From<IMSEC_A> for bool {
     }
 }
 #[doc = "Field `IMSEC` reader - RTC Second Interrupt Enable"]
-pub struct IMSEC_R(crate::FieldReader<bool, IMSEC_A>);
+pub struct IMSEC_R(crate::FieldReader<bool>);
 impl IMSEC_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         IMSEC_R(crate::FieldReader::new(bits))
     }
@@ -572,7 +579,7 @@ impl IMSEC_R {
     }
 }
 impl core::ops::Deref for IMSEC_R {
-    type Target = crate::FieldReader<bool, IMSEC_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -611,7 +618,7 @@ impl<'a> IMSEC_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -619,37 +626,37 @@ impl R {
     #[doc = "Bit 6 - RTC Alarm Interrupt Enable"]
     #[inline(always)]
     pub fn aint(&self) -> AINT_R {
-        AINT_R::new(((self.bits >> 6) & 0x01) != 0)
+        AINT_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 5 - RTC Month Interrupt Enable"]
     #[inline(always)]
     pub fn immon(&self) -> IMMON_R {
-        IMMON_R::new(((self.bits >> 5) & 0x01) != 0)
+        IMMON_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 4 - RTC Day Interrupt Enable"]
     #[inline(always)]
     pub fn imday(&self) -> IMDAY_R {
-        IMDAY_R::new(((self.bits >> 4) & 0x01) != 0)
+        IMDAY_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 3 - RTC Date Interrupt Enable"]
     #[inline(always)]
     pub fn imdate(&self) -> IMDATE_R {
-        IMDATE_R::new(((self.bits >> 3) & 0x01) != 0)
+        IMDATE_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 2 - RTC Hour Interrupt Enable"]
     #[inline(always)]
     pub fn imhour(&self) -> IMHOUR_R {
-        IMHOUR_R::new(((self.bits >> 2) & 0x01) != 0)
+        IMHOUR_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 1 - RTC Minute Interrupt Enable"]
     #[inline(always)]
     pub fn immin(&self) -> IMMIN_R {
-        IMMIN_R::new(((self.bits >> 1) & 0x01) != 0)
+        IMMIN_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 0 - RTC Second Interrupt Enable"]
     #[inline(always)]
     pub fn imsec(&self) -> IMSEC_R {
-        IMSEC_R::new((self.bits & 0x01) != 0)
+        IMSEC_R::new((self.bits & 1) != 0)
     }
 }
 impl W {

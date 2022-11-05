@@ -35,14 +35,15 @@ impl From<crate::W<LB_MASKED_SPEC>> for W {
     }
 }
 #[doc = "Field `LBM` reader - Data for lower byte access"]
-pub struct LBM_R(crate::FieldReader<u8, u8>);
+pub struct LBM_R(crate::FieldReader<u8>);
 impl LBM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         LBM_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for LBM_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

@@ -35,14 +35,15 @@ impl From<crate::W<INTPOLCLR_SPEC>> for W {
     }
 }
 #[doc = "Field `IPC15` reader - clears the interrupt polarity bit, indicates for edge or level"]
-pub struct IPC15_R(crate::FieldReader<bool, bool>);
+pub struct IPC15_R(crate::FieldReader<bool>);
 impl IPC15_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         IPC15_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for IPC15_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -66,19 +67,20 @@ impl<'a> IPC15_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u32 & 0x01) << 15);
+        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
         self.w
     }
 }
 #[doc = "Field `IPC14` reader - clears the interrupt polarity bit, indicates for edge or level"]
-pub struct IPC14_R(crate::FieldReader<bool, bool>);
+pub struct IPC14_R(crate::FieldReader<bool>);
 impl IPC14_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         IPC14_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for IPC14_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -102,19 +104,20 @@ impl<'a> IPC14_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | ((value as u32 & 0x01) << 14);
+        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
         self.w
     }
 }
 #[doc = "Field `IPC13` reader - clears the interrupt polarity bit, indicates for edge or level"]
-pub struct IPC13_R(crate::FieldReader<bool, bool>);
+pub struct IPC13_R(crate::FieldReader<bool>);
 impl IPC13_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         IPC13_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for IPC13_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -138,19 +141,20 @@ impl<'a> IPC13_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
         self.w
     }
 }
 #[doc = "Field `IPC12` reader - clears the interrupt polarity bit, indicates for edge or level"]
-pub struct IPC12_R(crate::FieldReader<bool, bool>);
+pub struct IPC12_R(crate::FieldReader<bool>);
 impl IPC12_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         IPC12_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for IPC12_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -174,19 +178,20 @@ impl<'a> IPC12_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
 #[doc = "Field `IPC11` reader - clears the interrupt polarity bit, indicates for edge or level"]
-pub struct IPC11_R(crate::FieldReader<bool, bool>);
+pub struct IPC11_R(crate::FieldReader<bool>);
 impl IPC11_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         IPC11_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for IPC11_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -210,19 +215,20 @@ impl<'a> IPC11_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
         self.w
     }
 }
 #[doc = "Field `IPC10` reader - clears the interrupt polarity bit, indicates for edge or level"]
-pub struct IPC10_R(crate::FieldReader<bool, bool>);
+pub struct IPC10_R(crate::FieldReader<bool>);
 impl IPC10_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         IPC10_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for IPC10_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -246,19 +252,20 @@ impl<'a> IPC10_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
 #[doc = "Field `IPC9` reader - clears the interrupt polarity bit, indicates for edge or level"]
-pub struct IPC9_R(crate::FieldReader<bool, bool>);
+pub struct IPC9_R(crate::FieldReader<bool>);
 impl IPC9_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         IPC9_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for IPC9_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -282,19 +289,20 @@ impl<'a> IPC9_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
 #[doc = "Field `IPC8` reader - clears the interrupt polarity bit, indicates for edge or level"]
-pub struct IPC8_R(crate::FieldReader<bool, bool>);
+pub struct IPC8_R(crate::FieldReader<bool>);
 impl IPC8_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         IPC8_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for IPC8_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -318,19 +326,20 @@ impl<'a> IPC8_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
 #[doc = "Field `IPC7` reader - clears the interrupt polarity bit, indicates for edge or level"]
-pub struct IPC7_R(crate::FieldReader<bool, bool>);
+pub struct IPC7_R(crate::FieldReader<bool>);
 impl IPC7_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         IPC7_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for IPC7_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -354,19 +363,20 @@ impl<'a> IPC7_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
 #[doc = "Field `IPC6` reader - clears the interrupt polarity bit, indicates for edge or level"]
-pub struct IPC6_R(crate::FieldReader<bool, bool>);
+pub struct IPC6_R(crate::FieldReader<bool>);
 impl IPC6_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         IPC6_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for IPC6_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -390,19 +400,20 @@ impl<'a> IPC6_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
 #[doc = "Field `IPC5` reader - clears the interrupt polarity bit, indicates for edge or level"]
-pub struct IPC5_R(crate::FieldReader<bool, bool>);
+pub struct IPC5_R(crate::FieldReader<bool>);
 impl IPC5_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         IPC5_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for IPC5_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -426,19 +437,20 @@ impl<'a> IPC5_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
 #[doc = "Field `IPC4` reader - clears the interrupt polarity bit, indicates for edge or level"]
-pub struct IPC4_R(crate::FieldReader<bool, bool>);
+pub struct IPC4_R(crate::FieldReader<bool>);
 impl IPC4_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         IPC4_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for IPC4_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -462,19 +474,20 @@ impl<'a> IPC4_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
 #[doc = "Field `IPC3` reader - clears the interrupt polarity bit, indicates for edge or level"]
-pub struct IPC3_R(crate::FieldReader<bool, bool>);
+pub struct IPC3_R(crate::FieldReader<bool>);
 impl IPC3_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         IPC3_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for IPC3_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -498,19 +511,20 @@ impl<'a> IPC3_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
 #[doc = "Field `IPC2` reader - clears the interrupt polarity bit, indicates for edge or level"]
-pub struct IPC2_R(crate::FieldReader<bool, bool>);
+pub struct IPC2_R(crate::FieldReader<bool>);
 impl IPC2_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         IPC2_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for IPC2_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -534,19 +548,20 @@ impl<'a> IPC2_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
 #[doc = "Field `IPC1` reader - clears the interrupt polarity bit, indicates for edge or level"]
-pub struct IPC1_R(crate::FieldReader<bool, bool>);
+pub struct IPC1_R(crate::FieldReader<bool>);
 impl IPC1_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         IPC1_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for IPC1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -570,19 +585,20 @@ impl<'a> IPC1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
 #[doc = "Field `IPC0` reader - clears the interrupt polarity bit, indicates for edge or level"]
-pub struct IPC0_R(crate::FieldReader<bool, bool>);
+pub struct IPC0_R(crate::FieldReader<bool>);
 impl IPC0_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         IPC0_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for IPC0_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -606,7 +622,7 @@ impl<'a> IPC0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -614,82 +630,82 @@ impl R {
     #[doc = "Bit 15 - clears the interrupt polarity bit, indicates for edge or level"]
     #[inline(always)]
     pub fn ipc15(&self) -> IPC15_R {
-        IPC15_R::new(((self.bits >> 15) & 0x01) != 0)
+        IPC15_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 14 - clears the interrupt polarity bit, indicates for edge or level"]
     #[inline(always)]
     pub fn ipc14(&self) -> IPC14_R {
-        IPC14_R::new(((self.bits >> 14) & 0x01) != 0)
+        IPC14_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 13 - clears the interrupt polarity bit, indicates for edge or level"]
     #[inline(always)]
     pub fn ipc13(&self) -> IPC13_R {
-        IPC13_R::new(((self.bits >> 13) & 0x01) != 0)
+        IPC13_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 12 - clears the interrupt polarity bit, indicates for edge or level"]
     #[inline(always)]
     pub fn ipc12(&self) -> IPC12_R {
-        IPC12_R::new(((self.bits >> 12) & 0x01) != 0)
+        IPC12_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 11 - clears the interrupt polarity bit, indicates for edge or level"]
     #[inline(always)]
     pub fn ipc11(&self) -> IPC11_R {
-        IPC11_R::new(((self.bits >> 11) & 0x01) != 0)
+        IPC11_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 10 - clears the interrupt polarity bit, indicates for edge or level"]
     #[inline(always)]
     pub fn ipc10(&self) -> IPC10_R {
-        IPC10_R::new(((self.bits >> 10) & 0x01) != 0)
+        IPC10_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 9 - clears the interrupt polarity bit, indicates for edge or level"]
     #[inline(always)]
     pub fn ipc9(&self) -> IPC9_R {
-        IPC9_R::new(((self.bits >> 9) & 0x01) != 0)
+        IPC9_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 8 - clears the interrupt polarity bit, indicates for edge or level"]
     #[inline(always)]
     pub fn ipc8(&self) -> IPC8_R {
-        IPC8_R::new(((self.bits >> 8) & 0x01) != 0)
+        IPC8_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 7 - clears the interrupt polarity bit, indicates for edge or level"]
     #[inline(always)]
     pub fn ipc7(&self) -> IPC7_R {
-        IPC7_R::new(((self.bits >> 7) & 0x01) != 0)
+        IPC7_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 6 - clears the interrupt polarity bit, indicates for edge or level"]
     #[inline(always)]
     pub fn ipc6(&self) -> IPC6_R {
-        IPC6_R::new(((self.bits >> 6) & 0x01) != 0)
+        IPC6_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 5 - clears the interrupt polarity bit, indicates for edge or level"]
     #[inline(always)]
     pub fn ipc5(&self) -> IPC5_R {
-        IPC5_R::new(((self.bits >> 5) & 0x01) != 0)
+        IPC5_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 4 - clears the interrupt polarity bit, indicates for edge or level"]
     #[inline(always)]
     pub fn ipc4(&self) -> IPC4_R {
-        IPC4_R::new(((self.bits >> 4) & 0x01) != 0)
+        IPC4_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 3 - clears the interrupt polarity bit, indicates for edge or level"]
     #[inline(always)]
     pub fn ipc3(&self) -> IPC3_R {
-        IPC3_R::new(((self.bits >> 3) & 0x01) != 0)
+        IPC3_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 2 - clears the interrupt polarity bit, indicates for edge or level"]
     #[inline(always)]
     pub fn ipc2(&self) -> IPC2_R {
-        IPC2_R::new(((self.bits >> 2) & 0x01) != 0)
+        IPC2_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 1 - clears the interrupt polarity bit, indicates for edge or level"]
     #[inline(always)]
     pub fn ipc1(&self) -> IPC1_R {
-        IPC1_R::new(((self.bits >> 1) & 0x01) != 0)
+        IPC1_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 0 - clears the interrupt polarity bit, indicates for edge or level"]
     #[inline(always)]
     pub fn ipc0(&self) -> IPC0_R {
-        IPC0_R::new((self.bits & 0x01) != 0)
+        IPC0_R::new((self.bits & 1) != 0)
     }
 }
 impl W {

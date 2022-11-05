@@ -49,8 +49,9 @@ impl From<IE7_A> for bool {
     }
 }
 #[doc = "Field `IE7` reader - Channel 7"]
-pub struct IE7_R(crate::FieldReader<bool, IE7_A>);
+pub struct IE7_R(crate::FieldReader<bool>);
 impl IE7_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         IE7_R(crate::FieldReader::new(bits))
     }
@@ -74,7 +75,7 @@ impl IE7_R {
     }
 }
 impl core::ops::Deref for IE7_R {
-    type Target = crate::FieldReader<bool, IE7_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -113,7 +114,7 @@ impl<'a> IE7_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -132,8 +133,9 @@ impl From<IE6_A> for bool {
     }
 }
 #[doc = "Field `IE6` reader - Channel 6"]
-pub struct IE6_R(crate::FieldReader<bool, IE6_A>);
+pub struct IE6_R(crate::FieldReader<bool>);
 impl IE6_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         IE6_R(crate::FieldReader::new(bits))
     }
@@ -157,7 +159,7 @@ impl IE6_R {
     }
 }
 impl core::ops::Deref for IE6_R {
-    type Target = crate::FieldReader<bool, IE6_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -196,7 +198,7 @@ impl<'a> IE6_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -215,8 +217,9 @@ impl From<IE5_A> for bool {
     }
 }
 #[doc = "Field `IE5` reader - Channel 5"]
-pub struct IE5_R(crate::FieldReader<bool, IE5_A>);
+pub struct IE5_R(crate::FieldReader<bool>);
 impl IE5_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         IE5_R(crate::FieldReader::new(bits))
     }
@@ -240,7 +243,7 @@ impl IE5_R {
     }
 }
 impl core::ops::Deref for IE5_R {
-    type Target = crate::FieldReader<bool, IE5_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -279,7 +282,7 @@ impl<'a> IE5_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -298,8 +301,9 @@ impl From<IE4_A> for bool {
     }
 }
 #[doc = "Field `IE4` reader - Channel 4"]
-pub struct IE4_R(crate::FieldReader<bool, IE4_A>);
+pub struct IE4_R(crate::FieldReader<bool>);
 impl IE4_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         IE4_R(crate::FieldReader::new(bits))
     }
@@ -323,7 +327,7 @@ impl IE4_R {
     }
 }
 impl core::ops::Deref for IE4_R {
-    type Target = crate::FieldReader<bool, IE4_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -362,7 +366,7 @@ impl<'a> IE4_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -381,8 +385,9 @@ impl From<IE3_A> for bool {
     }
 }
 #[doc = "Field `IE3` reader - Channel 3"]
-pub struct IE3_R(crate::FieldReader<bool, IE3_A>);
+pub struct IE3_R(crate::FieldReader<bool>);
 impl IE3_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         IE3_R(crate::FieldReader::new(bits))
     }
@@ -406,7 +411,7 @@ impl IE3_R {
     }
 }
 impl core::ops::Deref for IE3_R {
-    type Target = crate::FieldReader<bool, IE3_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -445,7 +450,7 @@ impl<'a> IE3_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -464,8 +469,9 @@ impl From<IE2_A> for bool {
     }
 }
 #[doc = "Field `IE2` reader - Channel 2"]
-pub struct IE2_R(crate::FieldReader<bool, IE2_A>);
+pub struct IE2_R(crate::FieldReader<bool>);
 impl IE2_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         IE2_R(crate::FieldReader::new(bits))
     }
@@ -489,7 +495,7 @@ impl IE2_R {
     }
 }
 impl core::ops::Deref for IE2_R {
-    type Target = crate::FieldReader<bool, IE2_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -528,7 +534,7 @@ impl<'a> IE2_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -547,8 +553,9 @@ impl From<IE1_A> for bool {
     }
 }
 #[doc = "Field `IE1` reader - Channel 1"]
-pub struct IE1_R(crate::FieldReader<bool, IE1_A>);
+pub struct IE1_R(crate::FieldReader<bool>);
 impl IE1_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         IE1_R(crate::FieldReader::new(bits))
     }
@@ -572,7 +579,7 @@ impl IE1_R {
     }
 }
 impl core::ops::Deref for IE1_R {
-    type Target = crate::FieldReader<bool, IE1_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -611,7 +618,7 @@ impl<'a> IE1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -630,8 +637,9 @@ impl From<IE0_A> for bool {
     }
 }
 #[doc = "Field `IE0` reader - Channel 0"]
-pub struct IE0_R(crate::FieldReader<bool, IE0_A>);
+pub struct IE0_R(crate::FieldReader<bool>);
 impl IE0_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         IE0_R(crate::FieldReader::new(bits))
     }
@@ -655,7 +663,7 @@ impl IE0_R {
     }
 }
 impl core::ops::Deref for IE0_R {
-    type Target = crate::FieldReader<bool, IE0_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -694,7 +702,7 @@ impl<'a> IE0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -702,42 +710,42 @@ impl R {
     #[doc = "Bit 7 - Channel 7"]
     #[inline(always)]
     pub fn ie7(&self) -> IE7_R {
-        IE7_R::new(((self.bits >> 7) & 0x01) != 0)
+        IE7_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 6 - Channel 6"]
     #[inline(always)]
     pub fn ie6(&self) -> IE6_R {
-        IE6_R::new(((self.bits >> 6) & 0x01) != 0)
+        IE6_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 5 - Channel 5"]
     #[inline(always)]
     pub fn ie5(&self) -> IE5_R {
-        IE5_R::new(((self.bits >> 5) & 0x01) != 0)
+        IE5_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 4 - Channel 4"]
     #[inline(always)]
     pub fn ie4(&self) -> IE4_R {
-        IE4_R::new(((self.bits >> 4) & 0x01) != 0)
+        IE4_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 3 - Channel 3"]
     #[inline(always)]
     pub fn ie3(&self) -> IE3_R {
-        IE3_R::new(((self.bits >> 3) & 0x01) != 0)
+        IE3_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 2 - Channel 2"]
     #[inline(always)]
     pub fn ie2(&self) -> IE2_R {
-        IE2_R::new(((self.bits >> 2) & 0x01) != 0)
+        IE2_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 1 - Channel 1"]
     #[inline(always)]
     pub fn ie1(&self) -> IE1_R {
-        IE1_R::new(((self.bits >> 1) & 0x01) != 0)
+        IE1_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 0 - Channel 0"]
     #[inline(always)]
     pub fn ie0(&self) -> IE0_R {
-        IE0_R::new((self.bits & 0x01) != 0)
+        IE0_R::new((self.bits & 1) != 0)
     }
 }
 impl W {

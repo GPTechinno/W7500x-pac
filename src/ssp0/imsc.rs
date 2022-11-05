@@ -35,14 +35,15 @@ impl From<crate::W<IMSC_SPEC>> for W {
     }
 }
 #[doc = "Field `TXIM` reader - Transmit FIFO interrupt mask"]
-pub struct TXIM_R(crate::FieldReader<bool, bool>);
+pub struct TXIM_R(crate::FieldReader<bool>);
 impl TXIM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TXIM_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for TXIM_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -66,19 +67,20 @@ impl<'a> TXIM_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
 #[doc = "Field `RXIM` reader - Receive FIFO interrupt mask"]
-pub struct RXIM_R(crate::FieldReader<bool, bool>);
+pub struct RXIM_R(crate::FieldReader<bool>);
 impl RXIM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RXIM_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for RXIM_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -102,19 +104,20 @@ impl<'a> RXIM_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
 #[doc = "Field `RTIM` reader - Receive timeout interrupt mask"]
-pub struct RTIM_R(crate::FieldReader<bool, bool>);
+pub struct RTIM_R(crate::FieldReader<bool>);
 impl RTIM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RTIM_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for RTIM_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -138,19 +141,20 @@ impl<'a> RTIM_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
 #[doc = "Field `RORIM` reader - Receive overrun interrupt mask"]
-pub struct RORIM_R(crate::FieldReader<bool, bool>);
+pub struct RORIM_R(crate::FieldReader<bool>);
 impl RORIM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RORIM_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for RORIM_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -174,7 +178,7 @@ impl<'a> RORIM_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -182,22 +186,22 @@ impl R {
     #[doc = "Bit 3 - Transmit FIFO interrupt mask"]
     #[inline(always)]
     pub fn txim(&self) -> TXIM_R {
-        TXIM_R::new(((self.bits >> 3) & 0x01) != 0)
+        TXIM_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 2 - Receive FIFO interrupt mask"]
     #[inline(always)]
     pub fn rxim(&self) -> RXIM_R {
-        RXIM_R::new(((self.bits >> 2) & 0x01) != 0)
+        RXIM_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 1 - Receive timeout interrupt mask"]
     #[inline(always)]
     pub fn rtim(&self) -> RTIM_R {
-        RTIM_R::new(((self.bits >> 1) & 0x01) != 0)
+        RTIM_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 0 - Receive overrun interrupt mask"]
     #[inline(always)]
     pub fn rorim(&self) -> RORIM_R {
-        RORIM_R::new((self.bits & 0x01) != 0)
+        RORIM_R::new((self.bits & 1) != 0)
     }
 }
 impl W {

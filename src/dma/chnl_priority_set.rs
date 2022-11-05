@@ -36,14 +36,15 @@ impl From<crate::W<CHNL_PRIORITY_SET_SPEC>> for W {
 }
 #[doc = "Field `CHNL_PRIORITY_SET` reader - CHNL_PRIORITY_SET\\[5:0\\]
 bits (Returns the channel priority mask status, or set the channel priority to high)"]
-pub struct CHNL_PRIORITY_SET_R(crate::FieldReader<u8, u8>);
+pub struct CHNL_PRIORITY_SET_R(crate::FieldReader<u8>);
 impl CHNL_PRIORITY_SET_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         CHNL_PRIORITY_SET_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for CHNL_PRIORITY_SET_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

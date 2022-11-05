@@ -37,14 +37,15 @@ impl From<crate::W<CHNL_ENABLE_SET_SPEC>> for W {
 #[doc = "Field `CHNL_ENABLE_SET` reader - CHNL_ENABLE_SET\\[5:0\\]
 bits (Set the appropriate bit to enable DMA requests for the channel corresponding to dma_req\\[Channel-1\\]
 and dma_sreq\\[Channel-1\\])"]
-pub struct CHNL_ENABLE_SET_R(crate::FieldReader<u8, u8>);
+pub struct CHNL_ENABLE_SET_R(crate::FieldReader<u8>);
 impl CHNL_ENABLE_SET_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         CHNL_ENABLE_SET_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for CHNL_ENABLE_SET_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

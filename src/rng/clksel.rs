@@ -49,8 +49,9 @@ impl From<CLKSEL_A> for bool {
     }
 }
 #[doc = "Field `CLKSEL` reader - select clock source register of RNG shift register"]
-pub struct CLKSEL_R(crate::FieldReader<bool, CLKSEL_A>);
+pub struct CLKSEL_R(crate::FieldReader<bool>);
 impl CLKSEL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CLKSEL_R(crate::FieldReader::new(bits))
     }
@@ -74,7 +75,7 @@ impl CLKSEL_R {
     }
 }
 impl core::ops::Deref for CLKSEL_R {
-    type Target = crate::FieldReader<bool, CLKSEL_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -113,7 +114,7 @@ impl<'a> CLKSEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -121,7 +122,7 @@ impl R {
     #[doc = "Bit 0 - select clock source register of RNG shift register"]
     #[inline(always)]
     pub fn clksel(&self) -> CLKSEL_R {
-        CLKSEL_R::new((self.bits & 0x01) != 0)
+        CLKSEL_R::new((self.bits & 1) != 0)
     }
 }
 impl W {

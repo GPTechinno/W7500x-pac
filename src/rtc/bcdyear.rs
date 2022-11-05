@@ -36,14 +36,15 @@ impl From<crate::W<BCDYEAR_SPEC>> for W {
 }
 #[doc = "Field `BCDYEAR` reader - BCDYEAR\\[15:0\\]
 bits (RTC Year value (0 to 4095))"]
-pub struct BCDYEAR_R(crate::FieldReader<u16, u16>);
+pub struct BCDYEAR_R(crate::FieldReader<u16>);
 impl BCDYEAR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
         BCDYEAR_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for BCDYEAR_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

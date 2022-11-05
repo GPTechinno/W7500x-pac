@@ -47,8 +47,9 @@ impl From<OE_A> for bool {
     }
 }
 #[doc = "Field `OE` reader - Overrun Error"]
-pub struct OE_R(crate::FieldReader<bool, OE_A>);
+pub struct OE_R(crate::FieldReader<bool>);
 impl OE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         OE_R(crate::FieldReader::new(bits))
     }
@@ -67,7 +68,7 @@ impl OE_R {
     }
 }
 impl core::ops::Deref for OE_R {
-    type Target = crate::FieldReader<bool, OE_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -101,7 +102,7 @@ impl<'a> OE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
         self.w
     }
 }
@@ -118,8 +119,9 @@ impl From<BE_A> for bool {
     }
 }
 #[doc = "Field `BE` reader - Break Error"]
-pub struct BE_R(crate::FieldReader<bool, BE_A>);
+pub struct BE_R(crate::FieldReader<bool>);
 impl BE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         BE_R(crate::FieldReader::new(bits))
     }
@@ -138,7 +140,7 @@ impl BE_R {
     }
 }
 impl core::ops::Deref for BE_R {
-    type Target = crate::FieldReader<bool, BE_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -172,7 +174,7 @@ impl<'a> BE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -189,8 +191,9 @@ impl From<PE_A> for bool {
     }
 }
 #[doc = "Field `PE` reader - Parity Error"]
-pub struct PE_R(crate::FieldReader<bool, PE_A>);
+pub struct PE_R(crate::FieldReader<bool>);
 impl PE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PE_R(crate::FieldReader::new(bits))
     }
@@ -209,7 +212,7 @@ impl PE_R {
     }
 }
 impl core::ops::Deref for PE_R {
-    type Target = crate::FieldReader<bool, PE_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -243,7 +246,7 @@ impl<'a> PE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -260,8 +263,9 @@ impl From<FE_A> for bool {
     }
 }
 #[doc = "Field `FE` reader - Framing Error"]
-pub struct FE_R(crate::FieldReader<bool, FE_A>);
+pub struct FE_R(crate::FieldReader<bool>);
 impl FE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         FE_R(crate::FieldReader::new(bits))
     }
@@ -280,7 +284,7 @@ impl FE_R {
     }
 }
 impl core::ops::Deref for FE_R {
-    type Target = crate::FieldReader<bool, FE_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -314,20 +318,21 @@ impl<'a> FE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
 #[doc = "Field `DATA` reader - DATA\\[7:0\\]
 bits (Receive (READ)/Transmit (WRITE) data)"]
-pub struct DATA_R(crate::FieldReader<u8, u8>);
+pub struct DATA_R(crate::FieldReader<u8>);
 impl DATA_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         DATA_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for DATA_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -350,22 +355,22 @@ impl R {
     #[doc = "Bit 11 - Overrun Error"]
     #[inline(always)]
     pub fn oe(&self) -> OE_R {
-        OE_R::new(((self.bits >> 11) & 0x01) != 0)
+        OE_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 10 - Break Error"]
     #[inline(always)]
     pub fn be(&self) -> BE_R {
-        BE_R::new(((self.bits >> 10) & 0x01) != 0)
+        BE_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 9 - Parity Error"]
     #[inline(always)]
     pub fn pe(&self) -> PE_R {
-        PE_R::new(((self.bits >> 9) & 0x01) != 0)
+        PE_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 8 - Framing Error"]
     #[inline(always)]
     pub fn fe(&self) -> FE_R {
-        FE_R::new(((self.bits >> 8) & 0x01) != 0)
+        FE_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bits 0:7 - DATA\\[7:0\\]
 bits (Receive (READ)/Transmit (WRITE) data)"]

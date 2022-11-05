@@ -35,14 +35,15 @@ impl From<crate::W<PLL_BPR_SPEC>> for W {
     }
 }
 #[doc = "Field `PLLBP` reader - PLL bypass flag"]
-pub struct PLLBP_R(crate::FieldReader<bool, bool>);
+pub struct PLLBP_R(crate::FieldReader<bool>);
 impl PLLBP_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PLLBP_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for PLLBP_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -66,7 +67,7 @@ impl<'a> PLLBP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -74,7 +75,7 @@ impl R {
     #[doc = "Bit 0 - PLL bypass flag"]
     #[inline(always)]
     pub fn pllbp(&self) -> PLLBP_R {
-        PLLBP_R::new((self.bits & 0x01) != 0)
+        PLLBP_R::new((self.bits & 1) != 0)
     }
 }
 impl W {

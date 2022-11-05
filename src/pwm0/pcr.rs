@@ -14,14 +14,15 @@ impl From<crate::R<PCR_SPEC>> for R {
     }
 }
 #[doc = "Field `PCR` reader - Prescale Counter"]
-pub struct PCR_R(crate::FieldReader<u8, u8>);
+pub struct PCR_R(crate::FieldReader<u8>);
 impl PCR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         PCR_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for PCR_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

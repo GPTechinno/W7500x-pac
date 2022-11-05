@@ -35,14 +35,15 @@ impl From<crate::W<INTENSET_SPEC>> for W {
     }
 }
 #[doc = "Field `IES15` reader - sets the interrupt enable bit, indicates the interrupt"]
-pub struct IES15_R(crate::FieldReader<bool, bool>);
+pub struct IES15_R(crate::FieldReader<bool>);
 impl IES15_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         IES15_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for IES15_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -66,19 +67,20 @@ impl<'a> IES15_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u32 & 0x01) << 15);
+        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
         self.w
     }
 }
 #[doc = "Field `IES14` reader - sets the interrupt enable bit, indicates the interrupt"]
-pub struct IES14_R(crate::FieldReader<bool, bool>);
+pub struct IES14_R(crate::FieldReader<bool>);
 impl IES14_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         IES14_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for IES14_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -102,19 +104,20 @@ impl<'a> IES14_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | ((value as u32 & 0x01) << 14);
+        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
         self.w
     }
 }
 #[doc = "Field `IES13` reader - sets the interrupt enable bit, indicates the interrupt"]
-pub struct IES13_R(crate::FieldReader<bool, bool>);
+pub struct IES13_R(crate::FieldReader<bool>);
 impl IES13_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         IES13_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for IES13_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -138,19 +141,20 @@ impl<'a> IES13_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
         self.w
     }
 }
 #[doc = "Field `IES12` reader - sets the interrupt enable bit, indicates the interrupt"]
-pub struct IES12_R(crate::FieldReader<bool, bool>);
+pub struct IES12_R(crate::FieldReader<bool>);
 impl IES12_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         IES12_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for IES12_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -174,19 +178,20 @@ impl<'a> IES12_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
 #[doc = "Field `IES11` reader - sets the interrupt enable bit, indicates the interrupt"]
-pub struct IES11_R(crate::FieldReader<bool, bool>);
+pub struct IES11_R(crate::FieldReader<bool>);
 impl IES11_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         IES11_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for IES11_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -210,19 +215,20 @@ impl<'a> IES11_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
         self.w
     }
 }
 #[doc = "Field `IES10` reader - sets the interrupt enable bit, indicates the interrupt"]
-pub struct IES10_R(crate::FieldReader<bool, bool>);
+pub struct IES10_R(crate::FieldReader<bool>);
 impl IES10_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         IES10_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for IES10_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -246,19 +252,20 @@ impl<'a> IES10_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
 #[doc = "Field `IES9` reader - sets the interrupt enable bit, indicates the interrupt"]
-pub struct IES9_R(crate::FieldReader<bool, bool>);
+pub struct IES9_R(crate::FieldReader<bool>);
 impl IES9_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         IES9_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for IES9_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -282,19 +289,20 @@ impl<'a> IES9_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
 #[doc = "Field `IES8` reader - sets the interrupt enable bit, indicates the interrupt"]
-pub struct IES8_R(crate::FieldReader<bool, bool>);
+pub struct IES8_R(crate::FieldReader<bool>);
 impl IES8_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         IES8_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for IES8_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -318,19 +326,20 @@ impl<'a> IES8_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
 #[doc = "Field `IES7` reader - sets the interrupt enable bit, indicates the interrupt"]
-pub struct IES7_R(crate::FieldReader<bool, bool>);
+pub struct IES7_R(crate::FieldReader<bool>);
 impl IES7_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         IES7_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for IES7_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -354,19 +363,20 @@ impl<'a> IES7_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
 #[doc = "Field `IES6` reader - sets the interrupt enable bit, indicates the interrupt"]
-pub struct IES6_R(crate::FieldReader<bool, bool>);
+pub struct IES6_R(crate::FieldReader<bool>);
 impl IES6_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         IES6_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for IES6_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -390,19 +400,20 @@ impl<'a> IES6_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
 #[doc = "Field `IES5` reader - sets the interrupt enable bit, indicates the interrupt"]
-pub struct IES5_R(crate::FieldReader<bool, bool>);
+pub struct IES5_R(crate::FieldReader<bool>);
 impl IES5_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         IES5_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for IES5_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -426,19 +437,20 @@ impl<'a> IES5_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
 #[doc = "Field `IES4` reader - sets the interrupt enable bit, indicates the interrupt"]
-pub struct IES4_R(crate::FieldReader<bool, bool>);
+pub struct IES4_R(crate::FieldReader<bool>);
 impl IES4_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         IES4_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for IES4_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -462,19 +474,20 @@ impl<'a> IES4_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
 #[doc = "Field `IES3` reader - sets the interrupt enable bit, indicates the interrupt"]
-pub struct IES3_R(crate::FieldReader<bool, bool>);
+pub struct IES3_R(crate::FieldReader<bool>);
 impl IES3_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         IES3_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for IES3_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -498,19 +511,20 @@ impl<'a> IES3_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
 #[doc = "Field `IES2` reader - sets the interrupt enable bit, indicates the interrupt"]
-pub struct IES2_R(crate::FieldReader<bool, bool>);
+pub struct IES2_R(crate::FieldReader<bool>);
 impl IES2_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         IES2_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for IES2_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -534,19 +548,20 @@ impl<'a> IES2_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
 #[doc = "Field `IES1` reader - sets the interrupt enable bit, indicates the interrupt"]
-pub struct IES1_R(crate::FieldReader<bool, bool>);
+pub struct IES1_R(crate::FieldReader<bool>);
 impl IES1_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         IES1_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for IES1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -570,19 +585,20 @@ impl<'a> IES1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
 #[doc = "Field `IES0` reader - sets the interrupt enable bit, indicates the interrupt"]
-pub struct IES0_R(crate::FieldReader<bool, bool>);
+pub struct IES0_R(crate::FieldReader<bool>);
 impl IES0_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         IES0_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for IES0_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -606,7 +622,7 @@ impl<'a> IES0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -614,82 +630,82 @@ impl R {
     #[doc = "Bit 15 - sets the interrupt enable bit, indicates the interrupt"]
     #[inline(always)]
     pub fn ies15(&self) -> IES15_R {
-        IES15_R::new(((self.bits >> 15) & 0x01) != 0)
+        IES15_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 14 - sets the interrupt enable bit, indicates the interrupt"]
     #[inline(always)]
     pub fn ies14(&self) -> IES14_R {
-        IES14_R::new(((self.bits >> 14) & 0x01) != 0)
+        IES14_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 13 - sets the interrupt enable bit, indicates the interrupt"]
     #[inline(always)]
     pub fn ies13(&self) -> IES13_R {
-        IES13_R::new(((self.bits >> 13) & 0x01) != 0)
+        IES13_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 12 - sets the interrupt enable bit, indicates the interrupt"]
     #[inline(always)]
     pub fn ies12(&self) -> IES12_R {
-        IES12_R::new(((self.bits >> 12) & 0x01) != 0)
+        IES12_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 11 - sets the interrupt enable bit, indicates the interrupt"]
     #[inline(always)]
     pub fn ies11(&self) -> IES11_R {
-        IES11_R::new(((self.bits >> 11) & 0x01) != 0)
+        IES11_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 10 - sets the interrupt enable bit, indicates the interrupt"]
     #[inline(always)]
     pub fn ies10(&self) -> IES10_R {
-        IES10_R::new(((self.bits >> 10) & 0x01) != 0)
+        IES10_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 9 - sets the interrupt enable bit, indicates the interrupt"]
     #[inline(always)]
     pub fn ies9(&self) -> IES9_R {
-        IES9_R::new(((self.bits >> 9) & 0x01) != 0)
+        IES9_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 8 - sets the interrupt enable bit, indicates the interrupt"]
     #[inline(always)]
     pub fn ies8(&self) -> IES8_R {
-        IES8_R::new(((self.bits >> 8) & 0x01) != 0)
+        IES8_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 7 - sets the interrupt enable bit, indicates the interrupt"]
     #[inline(always)]
     pub fn ies7(&self) -> IES7_R {
-        IES7_R::new(((self.bits >> 7) & 0x01) != 0)
+        IES7_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 6 - sets the interrupt enable bit, indicates the interrupt"]
     #[inline(always)]
     pub fn ies6(&self) -> IES6_R {
-        IES6_R::new(((self.bits >> 6) & 0x01) != 0)
+        IES6_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 5 - sets the interrupt enable bit, indicates the interrupt"]
     #[inline(always)]
     pub fn ies5(&self) -> IES5_R {
-        IES5_R::new(((self.bits >> 5) & 0x01) != 0)
+        IES5_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 4 - sets the interrupt enable bit, indicates the interrupt"]
     #[inline(always)]
     pub fn ies4(&self) -> IES4_R {
-        IES4_R::new(((self.bits >> 4) & 0x01) != 0)
+        IES4_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 3 - sets the interrupt enable bit, indicates the interrupt"]
     #[inline(always)]
     pub fn ies3(&self) -> IES3_R {
-        IES3_R::new(((self.bits >> 3) & 0x01) != 0)
+        IES3_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 2 - sets the interrupt enable bit, indicates the interrupt"]
     #[inline(always)]
     pub fn ies2(&self) -> IES2_R {
-        IES2_R::new(((self.bits >> 2) & 0x01) != 0)
+        IES2_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 1 - sets the interrupt enable bit, indicates the interrupt"]
     #[inline(always)]
     pub fn ies1(&self) -> IES1_R {
-        IES1_R::new(((self.bits >> 1) & 0x01) != 0)
+        IES1_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 0 - sets the interrupt enable bit, indicates the interrupt"]
     #[inline(always)]
     pub fn ies0(&self) -> IES0_R {
-        IES0_R::new((self.bits & 0x01) != 0)
+        IES0_R::new((self.bits & 1) != 0)
     }
 }
 impl W {

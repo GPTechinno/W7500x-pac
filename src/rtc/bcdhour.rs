@@ -36,14 +36,15 @@ impl From<crate::W<BCDHOUR_SPEC>> for W {
 }
 #[doc = "Field `BCDHOUR` reader - BCDHOUR\\[5:0\\]
 bits (RTC Hour value (0 to 23))"]
-pub struct BCDHOUR_R(crate::FieldReader<u8, u8>);
+pub struct BCDHOUR_R(crate::FieldReader<u8>);
 impl BCDHOUR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         BCDHOUR_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for BCDHOUR_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

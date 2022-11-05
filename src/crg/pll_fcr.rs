@@ -35,14 +35,15 @@ impl From<crate::W<PLL_FCR_SPEC>> for W {
     }
 }
 #[doc = "Field `M` reader - Loop divider control bits"]
-pub struct M_R(crate::FieldReader<u8, u8>);
+pub struct M_R(crate::FieldReader<u8>);
 impl M_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         M_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for M_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -61,14 +62,15 @@ impl<'a> M_W<'a> {
     }
 }
 #[doc = "Field `N` reader - Pre divider control bits"]
-pub struct N_R(crate::FieldReader<u8, u8>);
+pub struct N_R(crate::FieldReader<u8>);
 impl N_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         N_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for N_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -87,14 +89,15 @@ impl<'a> N_W<'a> {
     }
 }
 #[doc = "Field `OD` reader - Output divider control bits"]
-pub struct OD_R(crate::FieldReader<u8, u8>);
+pub struct OD_R(crate::FieldReader<u8>);
 impl OD_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         OD_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for OD_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -108,7 +111,7 @@ impl<'a> OD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03) | (value as u32 & 0x03);
+        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
         self.w
     }
 }
@@ -126,7 +129,7 @@ impl R {
     #[doc = "Bits 0:1 - Output divider control bits"]
     #[inline(always)]
     pub fn od(&self) -> OD_R {
-        OD_R::new((self.bits & 0x03) as u8)
+        OD_R::new((self.bits & 3) as u8)
     }
 }
 impl W {

@@ -35,14 +35,15 @@ impl From<crate::W<LOAD_SPEC>> for W {
     }
 }
 #[doc = "Field `WLR` reader - Watchdog timer Load"]
-pub struct WLR_R(crate::FieldReader<u32, u32>);
+pub struct WLR_R(crate::FieldReader<u32>);
 impl WLR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
         WLR_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for WLR_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -56,7 +57,7 @@ impl<'a> WLR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xffff_ffff) | (value as u32 & 0xffff_ffff);
+        self.w.bits = value;
         self.w
     }
 }
@@ -64,7 +65,7 @@ impl R {
     #[doc = "Bits 0:31 - Watchdog timer Load"]
     #[inline(always)]
     pub fn wlr(&self) -> WLR_R {
-        WLR_R::new((self.bits & 0xffff_ffff) as u32)
+        WLR_R::new(self.bits)
     }
 }
 impl W {

@@ -35,14 +35,15 @@ impl From<crate::W<CR0_SPEC>> for W {
     }
 }
 #[doc = "Field `SCR` reader - Serial clock rate"]
-pub struct SCR_R(crate::FieldReader<u8, u8>);
+pub struct SCR_R(crate::FieldReader<u8>);
 impl SCR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         SCR_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for SCR_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -61,14 +62,15 @@ impl<'a> SCR_W<'a> {
     }
 }
 #[doc = "Field `SPH` reader - SSPCLKOUT phase"]
-pub struct SPH_R(crate::FieldReader<bool, bool>);
+pub struct SPH_R(crate::FieldReader<bool>);
 impl SPH_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SPH_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for SPH_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -92,19 +94,20 @@ impl<'a> SPH_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
 #[doc = "Field `SPO` reader - SSPCLKOUT polarity"]
-pub struct SPO_R(crate::FieldReader<bool, bool>);
+pub struct SPO_R(crate::FieldReader<bool>);
 impl SPO_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SPO_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for SPO_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -128,19 +131,20 @@ impl<'a> SPO_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
 #[doc = "Field `FRF` reader - Frame Format"]
-pub struct FRF_R(crate::FieldReader<u8, u8>);
+pub struct FRF_R(crate::FieldReader<u8>);
 impl FRF_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         FRF_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for FRF_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -154,19 +158,20 @@ impl<'a> FRF_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 4)) | ((value as u32 & 0x03) << 4);
+        self.w.bits = (self.w.bits & !(3 << 4)) | ((value as u32 & 3) << 4);
         self.w
     }
 }
 #[doc = "Field `DSS` reader - Data size select"]
-pub struct DSS_R(crate::FieldReader<u8, u8>);
+pub struct DSS_R(crate::FieldReader<u8>);
 impl DSS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         DSS_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for DSS_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -193,17 +198,17 @@ impl R {
     #[doc = "Bit 7 - SSPCLKOUT phase"]
     #[inline(always)]
     pub fn sph(&self) -> SPH_R {
-        SPH_R::new(((self.bits >> 7) & 0x01) != 0)
+        SPH_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 6 - SSPCLKOUT polarity"]
     #[inline(always)]
     pub fn spo(&self) -> SPO_R {
-        SPO_R::new(((self.bits >> 6) & 0x01) != 0)
+        SPO_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bits 4:5 - Frame Format"]
     #[inline(always)]
     pub fn frf(&self) -> FRF_R {
-        FRF_R::new(((self.bits >> 4) & 0x03) as u8)
+        FRF_R::new(((self.bits >> 4) & 3) as u8)
     }
     #[doc = "Bits 0:3 - Data size select"]
     #[inline(always)]

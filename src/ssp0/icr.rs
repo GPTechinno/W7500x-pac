@@ -35,14 +35,15 @@ impl From<crate::W<ICR_SPEC>> for W {
     }
 }
 #[doc = "Field `RTIC` reader - Receive timeout interrupt clear"]
-pub struct RTIC_R(crate::FieldReader<bool, bool>);
+pub struct RTIC_R(crate::FieldReader<bool>);
 impl RTIC_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RTIC_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for RTIC_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -66,19 +67,20 @@ impl<'a> RTIC_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
 #[doc = "Field `RORIC` reader - Receive overrun interrupt clear"]
-pub struct RORIC_R(crate::FieldReader<bool, bool>);
+pub struct RORIC_R(crate::FieldReader<bool>);
 impl RORIC_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RORIC_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for RORIC_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -102,7 +104,7 @@ impl<'a> RORIC_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -110,12 +112,12 @@ impl R {
     #[doc = "Bit 1 - Receive timeout interrupt clear"]
     #[inline(always)]
     pub fn rtic(&self) -> RTIC_R {
-        RTIC_R::new(((self.bits >> 1) & 0x01) != 0)
+        RTIC_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 0 - Receive overrun interrupt clear"]
     #[inline(always)]
     pub fn roric(&self) -> RORIC_R {
-        RORIC_R::new((self.bits & 0x01) != 0)
+        RORIC_R::new((self.bits & 1) != 0)
     }
 }
 impl W {

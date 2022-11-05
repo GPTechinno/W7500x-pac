@@ -49,8 +49,9 @@ impl From<REN_A> for bool {
     }
 }
 #[doc = "Field `REN` reader - Reset Request Enable"]
-pub struct REN_R(crate::FieldReader<bool, REN_A>);
+pub struct REN_R(crate::FieldReader<bool>);
 impl REN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         REN_R(crate::FieldReader::new(bits))
     }
@@ -74,7 +75,7 @@ impl REN_R {
     }
 }
 impl core::ops::Deref for REN_R {
-    type Target = crate::FieldReader<bool, REN_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -113,7 +114,7 @@ impl<'a> REN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -132,8 +133,9 @@ impl From<IEN_A> for bool {
     }
 }
 #[doc = "Field `IEN` reader - Interrupt Enable"]
-pub struct IEN_R(crate::FieldReader<bool, IEN_A>);
+pub struct IEN_R(crate::FieldReader<bool>);
 impl IEN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         IEN_R(crate::FieldReader::new(bits))
     }
@@ -157,7 +159,7 @@ impl IEN_R {
     }
 }
 impl core::ops::Deref for IEN_R {
-    type Target = crate::FieldReader<bool, IEN_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -196,7 +198,7 @@ impl<'a> IEN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -204,12 +206,12 @@ impl R {
     #[doc = "Bit 1 - Reset Request Enable"]
     #[inline(always)]
     pub fn ren(&self) -> REN_R {
-        REN_R::new(((self.bits >> 1) & 0x01) != 0)
+        REN_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 0 - Interrupt Enable"]
     #[inline(always)]
     pub fn ien(&self) -> IEN_R {
-        IEN_R::new((self.bits & 0x01) != 0)
+        IEN_R::new((self.bits & 1) != 0)
     }
 }
 impl W {

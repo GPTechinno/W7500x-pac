@@ -86,8 +86,9 @@ impl From<CLKMON_SEL_A> for u8 {
     }
 }
 #[doc = "Field `CLKMON_SEL` reader - Monitoring Clock source select bits"]
-pub struct CLKMON_SEL_R(crate::FieldReader<u8, CLKMON_SEL_A>);
+pub struct CLKMON_SEL_R(crate::FieldReader<u8>);
 impl CLKMON_SEL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         CLKMON_SEL_R(crate::FieldReader::new(bits))
     }
@@ -220,7 +221,7 @@ impl CLKMON_SEL_R {
     }
 }
 impl core::ops::Deref for CLKMON_SEL_R {
-    type Target = crate::FieldReader<u8, CLKMON_SEL_A>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

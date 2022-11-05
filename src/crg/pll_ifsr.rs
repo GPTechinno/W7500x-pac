@@ -49,8 +49,9 @@ impl From<PLLIS_A> for bool {
     }
 }
 #[doc = "Field `PLLIS` reader - PLL input clock source select flag"]
-pub struct PLLIS_R(crate::FieldReader<bool, PLLIS_A>);
+pub struct PLLIS_R(crate::FieldReader<bool>);
 impl PLLIS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PLLIS_R(crate::FieldReader::new(bits))
     }
@@ -74,7 +75,7 @@ impl PLLIS_R {
     }
 }
 impl core::ops::Deref for PLLIS_R {
-    type Target = crate::FieldReader<bool, PLLIS_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -113,7 +114,7 @@ impl<'a> PLLIS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -121,7 +122,7 @@ impl R {
     #[doc = "Bit 0 - PLL input clock source select flag"]
     #[inline(always)]
     pub fn pllis(&self) -> PLLIS_R {
-        PLLIS_R::new((self.bits & 0x01) != 0)
+        PLLIS_R::new((self.bits & 1) != 0)
     }
 }
 impl W {

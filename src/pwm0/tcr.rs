@@ -14,14 +14,15 @@ impl From<crate::R<TCR_SPEC>> for R {
     }
 }
 #[doc = "Field `TCR` reader - Timer/Counter"]
-pub struct TCR_R(crate::FieldReader<u32, u32>);
+pub struct TCR_R(crate::FieldReader<u32>);
 impl TCR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
         TCR_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for TCR_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -31,7 +32,7 @@ impl R {
     #[doc = "Bits 0:31 - Timer/Counter"]
     #[inline(always)]
     pub fn tcr(&self) -> TCR_R {
-        TCR_R::new((self.bits & 0xffff_ffff) as u32)
+        TCR_R::new(self.bits)
     }
 }
 #[doc = "Timer/Counter register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [tcr](index.html) module"]

@@ -49,8 +49,9 @@ impl From<UDM_A> for bool {
     }
 }
 #[doc = "Field `UDM` reader - Up-Down mode"]
-pub struct UDM_R(crate::FieldReader<bool, UDM_A>);
+pub struct UDM_R(crate::FieldReader<bool>);
 impl UDM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         UDM_R(crate::FieldReader::new(bits))
     }
@@ -74,7 +75,7 @@ impl UDM_R {
     }
 }
 impl core::ops::Deref for UDM_R {
-    type Target = crate::FieldReader<bool, UDM_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -113,7 +114,7 @@ impl<'a> UDM_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -121,7 +122,7 @@ impl R {
     #[doc = "Bit 0 - Up-Down mode"]
     #[inline(always)]
     pub fn udm(&self) -> UDM_R {
-        UDM_R::new((self.bits & 0x01) != 0)
+        UDM_R::new((self.bits & 1) != 0)
     }
 }
 impl W {

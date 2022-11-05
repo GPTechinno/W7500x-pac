@@ -35,14 +35,15 @@ impl From<crate::W<MR_SPEC>> for W {
     }
 }
 #[doc = "Field `MR` reader - Match"]
-pub struct MR_R(crate::FieldReader<u32, u32>);
+pub struct MR_R(crate::FieldReader<u32>);
 impl MR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
         MR_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for MR_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -56,7 +57,7 @@ impl<'a> MR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xffff_ffff) | (value as u32 & 0xffff_ffff);
+        self.w.bits = value;
         self.w
     }
 }
@@ -64,7 +65,7 @@ impl R {
     #[doc = "Bits 0:31 - Match"]
     #[inline(always)]
     pub fn mr(&self) -> MR_R {
-        MR_R::new((self.bits & 0xffff_ffff) as u32)
+        MR_R::new(self.bits)
     }
 }
 impl W {

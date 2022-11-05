@@ -49,8 +49,9 @@ impl From<MASK_A> for bool {
     }
 }
 #[doc = "Field `MASK` reader - Interrupt mask signal"]
-pub struct MASK_R(crate::FieldReader<bool, MASK_A>);
+pub struct MASK_R(crate::FieldReader<bool>);
 impl MASK_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         MASK_R(crate::FieldReader::new(bits))
     }
@@ -74,7 +75,7 @@ impl MASK_R {
     }
 }
 impl core::ops::Deref for MASK_R {
-    type Target = crate::FieldReader<bool, MASK_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -113,7 +114,7 @@ impl<'a> MASK_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -132,8 +133,9 @@ impl From<INT_A> for bool {
     }
 }
 #[doc = "Field `INT` reader - ADC conversion is done of Interrupt bit"]
-pub struct INT_R(crate::FieldReader<bool, INT_A>);
+pub struct INT_R(crate::FieldReader<bool>);
 impl INT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         INT_R(crate::FieldReader::new(bits))
     }
@@ -157,7 +159,7 @@ impl INT_R {
     }
 }
 impl core::ops::Deref for INT_R {
-    type Target = crate::FieldReader<bool, INT_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -196,7 +198,7 @@ impl<'a> INT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -204,12 +206,12 @@ impl R {
     #[doc = "Bit 1 - Interrupt mask signal"]
     #[inline(always)]
     pub fn mask(&self) -> MASK_R {
-        MASK_R::new(((self.bits >> 1) & 0x01) != 0)
+        MASK_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 0 - ADC conversion is done of Interrupt bit"]
     #[inline(always)]
     pub fn int(&self) -> INT_R {
-        INT_R::new((self.bits & 0x01) != 0)
+        INT_R::new((self.bits & 1) != 0)
     }
 }
 impl W {

@@ -28,8 +28,9 @@ impl From<CI_A> for bool {
     }
 }
 #[doc = "Field `CI` reader - Capture Interrupt occurs"]
-pub struct CI_R(crate::FieldReader<bool, CI_A>);
+pub struct CI_R(crate::FieldReader<bool>);
 impl CI_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CI_R(crate::FieldReader::new(bits))
     }
@@ -53,7 +54,7 @@ impl CI_R {
     }
 }
 impl core::ops::Deref for CI_R {
-    type Target = crate::FieldReader<bool, CI_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -74,8 +75,9 @@ impl From<OI_A> for bool {
     }
 }
 #[doc = "Field `OI` reader - Overflow Interrupt occurs"]
-pub struct OI_R(crate::FieldReader<bool, OI_A>);
+pub struct OI_R(crate::FieldReader<bool>);
 impl OI_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         OI_R(crate::FieldReader::new(bits))
     }
@@ -99,7 +101,7 @@ impl OI_R {
     }
 }
 impl core::ops::Deref for OI_R {
-    type Target = crate::FieldReader<bool, OI_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -120,8 +122,9 @@ impl From<MI_A> for bool {
     }
 }
 #[doc = "Field `MI` reader - Match Interrupt occurs"]
-pub struct MI_R(crate::FieldReader<bool, MI_A>);
+pub struct MI_R(crate::FieldReader<bool>);
 impl MI_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         MI_R(crate::FieldReader::new(bits))
     }
@@ -145,7 +148,7 @@ impl MI_R {
     }
 }
 impl core::ops::Deref for MI_R {
-    type Target = crate::FieldReader<bool, MI_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -155,17 +158,17 @@ impl R {
     #[doc = "Bit 2 - Capture Interrupt occurs"]
     #[inline(always)]
     pub fn ci(&self) -> CI_R {
-        CI_R::new(((self.bits >> 2) & 0x01) != 0)
+        CI_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 1 - Overflow Interrupt occurs"]
     #[inline(always)]
     pub fn oi(&self) -> OI_R {
-        OI_R::new(((self.bits >> 1) & 0x01) != 0)
+        OI_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 0 - Match Interrupt occurs"]
     #[inline(always)]
     pub fn mi(&self) -> MI_R {
-        MI_R::new((self.bits & 0x01) != 0)
+        MI_R::new((self.bits & 1) != 0)
     }
 }
 #[doc = "Interrupt register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ir](index.html) module"]

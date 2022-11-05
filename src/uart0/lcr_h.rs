@@ -49,8 +49,9 @@ impl From<SPS_A> for bool {
     }
 }
 #[doc = "Field `SPS` reader - Stick parity select"]
-pub struct SPS_R(crate::FieldReader<bool, SPS_A>);
+pub struct SPS_R(crate::FieldReader<bool>);
 impl SPS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SPS_R(crate::FieldReader::new(bits))
     }
@@ -74,7 +75,7 @@ impl SPS_R {
     }
 }
 impl core::ops::Deref for SPS_R {
-    type Target = crate::FieldReader<bool, SPS_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -113,7 +114,7 @@ impl<'a> SPS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -137,8 +138,9 @@ impl From<WLEN_A> for u8 {
     }
 }
 #[doc = "Field `WLEN` reader - Word length"]
-pub struct WLEN_R(crate::FieldReader<u8, WLEN_A>);
+pub struct WLEN_R(crate::FieldReader<u8>);
 impl WLEN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         WLEN_R(crate::FieldReader::new(bits))
     }
@@ -175,7 +177,7 @@ impl WLEN_R {
     }
 }
 impl core::ops::Deref for WLEN_R {
-    type Target = crate::FieldReader<u8, WLEN_A>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -214,7 +216,7 @@ impl<'a> WLEN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 5)) | ((value as u32 & 0x03) << 5);
+        self.w.bits = (self.w.bits & !(3 << 5)) | ((value as u32 & 3) << 5);
         self.w
     }
 }
@@ -233,8 +235,9 @@ impl From<FEN_A> for bool {
     }
 }
 #[doc = "Field `FEN` reader - Enable FIFOs"]
-pub struct FEN_R(crate::FieldReader<bool, FEN_A>);
+pub struct FEN_R(crate::FieldReader<bool>);
 impl FEN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         FEN_R(crate::FieldReader::new(bits))
     }
@@ -258,7 +261,7 @@ impl FEN_R {
     }
 }
 impl core::ops::Deref for FEN_R {
-    type Target = crate::FieldReader<bool, FEN_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -297,7 +300,7 @@ impl<'a> FEN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -316,8 +319,9 @@ impl From<EPS_A> for bool {
     }
 }
 #[doc = "Field `EPS` reader - Even parity select"]
-pub struct EPS_R(crate::FieldReader<bool, EPS_A>);
+pub struct EPS_R(crate::FieldReader<bool>);
 impl EPS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EPS_R(crate::FieldReader::new(bits))
     }
@@ -341,7 +345,7 @@ impl EPS_R {
     }
 }
 impl core::ops::Deref for EPS_R {
-    type Target = crate::FieldReader<bool, EPS_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -380,7 +384,7 @@ impl<'a> EPS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -399,8 +403,9 @@ impl From<PEN_A> for bool {
     }
 }
 #[doc = "Field `PEN` reader - Parity enable"]
-pub struct PEN_R(crate::FieldReader<bool, PEN_A>);
+pub struct PEN_R(crate::FieldReader<bool>);
 impl PEN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PEN_R(crate::FieldReader::new(bits))
     }
@@ -424,7 +429,7 @@ impl PEN_R {
     }
 }
 impl core::ops::Deref for PEN_R {
-    type Target = crate::FieldReader<bool, PEN_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -463,7 +468,7 @@ impl<'a> PEN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -482,8 +487,9 @@ impl From<BRK_A> for bool {
     }
 }
 #[doc = "Field `BRK` reader - Send break"]
-pub struct BRK_R(crate::FieldReader<bool, BRK_A>);
+pub struct BRK_R(crate::FieldReader<bool>);
 impl BRK_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         BRK_R(crate::FieldReader::new(bits))
     }
@@ -507,7 +513,7 @@ impl BRK_R {
     }
 }
 impl core::ops::Deref for BRK_R {
-    type Target = crate::FieldReader<bool, BRK_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -546,7 +552,7 @@ impl<'a> BRK_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -554,32 +560,32 @@ impl R {
     #[doc = "Bit 7 - Stick parity select"]
     #[inline(always)]
     pub fn sps(&self) -> SPS_R {
-        SPS_R::new(((self.bits >> 7) & 0x01) != 0)
+        SPS_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bits 5:6 - Word length"]
     #[inline(always)]
     pub fn wlen(&self) -> WLEN_R {
-        WLEN_R::new(((self.bits >> 5) & 0x03) as u8)
+        WLEN_R::new(((self.bits >> 5) & 3) as u8)
     }
     #[doc = "Bit 4 - Enable FIFOs"]
     #[inline(always)]
     pub fn fen(&self) -> FEN_R {
-        FEN_R::new(((self.bits >> 4) & 0x01) != 0)
+        FEN_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 2 - Even parity select"]
     #[inline(always)]
     pub fn eps(&self) -> EPS_R {
-        EPS_R::new(((self.bits >> 2) & 0x01) != 0)
+        EPS_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 1 - Parity enable"]
     #[inline(always)]
     pub fn pen(&self) -> PEN_R {
-        PEN_R::new(((self.bits >> 1) & 0x01) != 0)
+        PEN_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 0 - Send break"]
     #[inline(always)]
     pub fn brk(&self) -> BRK_R {
-        BRK_R::new((self.bits & 0x01) != 0)
+        BRK_R::new((self.bits & 1) != 0)
     }
 }
 impl W {

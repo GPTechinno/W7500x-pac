@@ -26,8 +26,9 @@ impl From<OEIM_A> for bool {
     }
 }
 #[doc = "Field `OEIM` reader - Overrun error masked interrupt status"]
-pub struct OEIM_R(crate::FieldReader<bool, OEIM_A>);
+pub struct OEIM_R(crate::FieldReader<bool>);
 impl OEIM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         OEIM_R(crate::FieldReader::new(bits))
     }
@@ -46,7 +47,7 @@ impl OEIM_R {
     }
 }
 impl core::ops::Deref for OEIM_R {
-    type Target = crate::FieldReader<bool, OEIM_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -65,8 +66,9 @@ impl From<BEIM_A> for bool {
     }
 }
 #[doc = "Field `BEIM` reader - Break error masked interrupt status"]
-pub struct BEIM_R(crate::FieldReader<bool, BEIM_A>);
+pub struct BEIM_R(crate::FieldReader<bool>);
 impl BEIM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         BEIM_R(crate::FieldReader::new(bits))
     }
@@ -85,7 +87,7 @@ impl BEIM_R {
     }
 }
 impl core::ops::Deref for BEIM_R {
-    type Target = crate::FieldReader<bool, BEIM_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -104,8 +106,9 @@ impl From<PEIM_A> for bool {
     }
 }
 #[doc = "Field `PEIM` reader - Parity error masked interrupt status"]
-pub struct PEIM_R(crate::FieldReader<bool, PEIM_A>);
+pub struct PEIM_R(crate::FieldReader<bool>);
 impl PEIM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PEIM_R(crate::FieldReader::new(bits))
     }
@@ -124,7 +127,7 @@ impl PEIM_R {
     }
 }
 impl core::ops::Deref for PEIM_R {
-    type Target = crate::FieldReader<bool, PEIM_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -143,8 +146,9 @@ impl From<FEIM_A> for bool {
     }
 }
 #[doc = "Field `FEIM` reader - Framing error masked interrupt status"]
-pub struct FEIM_R(crate::FieldReader<bool, FEIM_A>);
+pub struct FEIM_R(crate::FieldReader<bool>);
 impl FEIM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         FEIM_R(crate::FieldReader::new(bits))
     }
@@ -163,7 +167,7 @@ impl FEIM_R {
     }
 }
 impl core::ops::Deref for FEIM_R {
-    type Target = crate::FieldReader<bool, FEIM_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -182,8 +186,9 @@ impl From<RTIM_A> for bool {
     }
 }
 #[doc = "Field `RTIM` reader - Receive masked interrupt status"]
-pub struct RTIM_R(crate::FieldReader<bool, RTIM_A>);
+pub struct RTIM_R(crate::FieldReader<bool>);
 impl RTIM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RTIM_R(crate::FieldReader::new(bits))
     }
@@ -202,7 +207,7 @@ impl RTIM_R {
     }
 }
 impl core::ops::Deref for RTIM_R {
-    type Target = crate::FieldReader<bool, RTIM_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -221,8 +226,9 @@ impl From<TXIM_A> for bool {
     }
 }
 #[doc = "Field `TXIM` reader - Transmit masked interrupt status"]
-pub struct TXIM_R(crate::FieldReader<bool, TXIM_A>);
+pub struct TXIM_R(crate::FieldReader<bool>);
 impl TXIM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TXIM_R(crate::FieldReader::new(bits))
     }
@@ -241,7 +247,7 @@ impl TXIM_R {
     }
 }
 impl core::ops::Deref for TXIM_R {
-    type Target = crate::FieldReader<bool, TXIM_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -260,8 +266,9 @@ impl From<RXIM_A> for bool {
     }
 }
 #[doc = "Field `RXIM` reader - Receive masked interrupt status"]
-pub struct RXIM_R(crate::FieldReader<bool, RXIM_A>);
+pub struct RXIM_R(crate::FieldReader<bool>);
 impl RXIM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RXIM_R(crate::FieldReader::new(bits))
     }
@@ -280,7 +287,7 @@ impl RXIM_R {
     }
 }
 impl core::ops::Deref for RXIM_R {
-    type Target = crate::FieldReader<bool, RXIM_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -299,8 +306,9 @@ impl From<DSRMIM_A> for bool {
     }
 }
 #[doc = "Field `DSRMIM` reader - nUARTDSR modem masked interrupt status"]
-pub struct DSRMIM_R(crate::FieldReader<bool, DSRMIM_A>);
+pub struct DSRMIM_R(crate::FieldReader<bool>);
 impl DSRMIM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         DSRMIM_R(crate::FieldReader::new(bits))
     }
@@ -319,7 +327,7 @@ impl DSRMIM_R {
     }
 }
 impl core::ops::Deref for DSRMIM_R {
-    type Target = crate::FieldReader<bool, DSRMIM_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -338,8 +346,9 @@ impl From<DCDMIM_A> for bool {
     }
 }
 #[doc = "Field `DCDMIM` reader - nUARTDCD modem masked interrupt status"]
-pub struct DCDMIM_R(crate::FieldReader<bool, DCDMIM_A>);
+pub struct DCDMIM_R(crate::FieldReader<bool>);
 impl DCDMIM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         DCDMIM_R(crate::FieldReader::new(bits))
     }
@@ -358,7 +367,7 @@ impl DCDMIM_R {
     }
 }
 impl core::ops::Deref for DCDMIM_R {
-    type Target = crate::FieldReader<bool, DCDMIM_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -377,8 +386,9 @@ impl From<CTSMIM_A> for bool {
     }
 }
 #[doc = "Field `CTSMIM` reader - nUARTCTS modem masked interrupt status"]
-pub struct CTSMIM_R(crate::FieldReader<bool, CTSMIM_A>);
+pub struct CTSMIM_R(crate::FieldReader<bool>);
 impl CTSMIM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CTSMIM_R(crate::FieldReader::new(bits))
     }
@@ -397,7 +407,7 @@ impl CTSMIM_R {
     }
 }
 impl core::ops::Deref for CTSMIM_R {
-    type Target = crate::FieldReader<bool, CTSMIM_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -416,8 +426,9 @@ impl From<RIMIM_A> for bool {
     }
 }
 #[doc = "Field `RIMIM` reader - nUARTRI modem masked interrupt status"]
-pub struct RIMIM_R(crate::FieldReader<bool, RIMIM_A>);
+pub struct RIMIM_R(crate::FieldReader<bool>);
 impl RIMIM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RIMIM_R(crate::FieldReader::new(bits))
     }
@@ -436,7 +447,7 @@ impl RIMIM_R {
     }
 }
 impl core::ops::Deref for RIMIM_R {
-    type Target = crate::FieldReader<bool, RIMIM_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -446,57 +457,57 @@ impl R {
     #[doc = "Bit 10 - Overrun error masked interrupt status"]
     #[inline(always)]
     pub fn oeim(&self) -> OEIM_R {
-        OEIM_R::new(((self.bits >> 10) & 0x01) != 0)
+        OEIM_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 9 - Break error masked interrupt status"]
     #[inline(always)]
     pub fn beim(&self) -> BEIM_R {
-        BEIM_R::new(((self.bits >> 9) & 0x01) != 0)
+        BEIM_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 8 - Parity error masked interrupt status"]
     #[inline(always)]
     pub fn peim(&self) -> PEIM_R {
-        PEIM_R::new(((self.bits >> 8) & 0x01) != 0)
+        PEIM_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 7 - Framing error masked interrupt status"]
     #[inline(always)]
     pub fn feim(&self) -> FEIM_R {
-        FEIM_R::new(((self.bits >> 7) & 0x01) != 0)
+        FEIM_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 6 - Receive masked interrupt status"]
     #[inline(always)]
     pub fn rtim(&self) -> RTIM_R {
-        RTIM_R::new(((self.bits >> 6) & 0x01) != 0)
+        RTIM_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 5 - Transmit masked interrupt status"]
     #[inline(always)]
     pub fn txim(&self) -> TXIM_R {
-        TXIM_R::new(((self.bits >> 5) & 0x01) != 0)
+        TXIM_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 4 - Receive masked interrupt status"]
     #[inline(always)]
     pub fn rxim(&self) -> RXIM_R {
-        RXIM_R::new(((self.bits >> 4) & 0x01) != 0)
+        RXIM_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 3 - nUARTDSR modem masked interrupt status"]
     #[inline(always)]
     pub fn dsrmim(&self) -> DSRMIM_R {
-        DSRMIM_R::new(((self.bits >> 3) & 0x01) != 0)
+        DSRMIM_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 2 - nUARTDCD modem masked interrupt status"]
     #[inline(always)]
     pub fn dcdmim(&self) -> DCDMIM_R {
-        DCDMIM_R::new(((self.bits >> 2) & 0x01) != 0)
+        DCDMIM_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 1 - nUARTCTS modem masked interrupt status"]
     #[inline(always)]
     pub fn ctsmim(&self) -> CTSMIM_R {
-        CTSMIM_R::new(((self.bits >> 1) & 0x01) != 0)
+        CTSMIM_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 0 - nUARTRI modem masked interrupt status"]
     #[inline(always)]
     pub fn rimim(&self) -> RIMIM_R {
-        RIMIM_R::new((self.bits & 0x01) != 0)
+        RIMIM_R::new((self.bits & 1) != 0)
     }
 }
 #[doc = "Masked Interrupt Status\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [mis](index.html) module"]

@@ -35,14 +35,15 @@ impl From<crate::W<INTTYPESET_SPEC>> for W {
     }
 }
 #[doc = "Field `ITS15` reader - sets the interrupt type bit, indicates for edge or level"]
-pub struct ITS15_R(crate::FieldReader<bool, bool>);
+pub struct ITS15_R(crate::FieldReader<bool>);
 impl ITS15_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ITS15_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for ITS15_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -66,19 +67,20 @@ impl<'a> ITS15_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u32 & 0x01) << 15);
+        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
         self.w
     }
 }
 #[doc = "Field `ITS14` reader - sets the interrupt type bit, indicates for edge or level"]
-pub struct ITS14_R(crate::FieldReader<bool, bool>);
+pub struct ITS14_R(crate::FieldReader<bool>);
 impl ITS14_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ITS14_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for ITS14_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -102,19 +104,20 @@ impl<'a> ITS14_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | ((value as u32 & 0x01) << 14);
+        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
         self.w
     }
 }
 #[doc = "Field `ITS13` reader - sets the interrupt type bit, indicates for edge or level"]
-pub struct ITS13_R(crate::FieldReader<bool, bool>);
+pub struct ITS13_R(crate::FieldReader<bool>);
 impl ITS13_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ITS13_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for ITS13_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -138,19 +141,20 @@ impl<'a> ITS13_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
         self.w
     }
 }
 #[doc = "Field `ITS12` reader - sets the interrupt type bit, indicates for edge or level"]
-pub struct ITS12_R(crate::FieldReader<bool, bool>);
+pub struct ITS12_R(crate::FieldReader<bool>);
 impl ITS12_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ITS12_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for ITS12_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -174,19 +178,20 @@ impl<'a> ITS12_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
 #[doc = "Field `ITS11` reader - sets the interrupt type bit, indicates for edge or level"]
-pub struct ITS11_R(crate::FieldReader<bool, bool>);
+pub struct ITS11_R(crate::FieldReader<bool>);
 impl ITS11_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ITS11_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for ITS11_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -210,19 +215,20 @@ impl<'a> ITS11_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
         self.w
     }
 }
 #[doc = "Field `ITS10` reader - sets the interrupt type bit, indicates for edge or level"]
-pub struct ITS10_R(crate::FieldReader<bool, bool>);
+pub struct ITS10_R(crate::FieldReader<bool>);
 impl ITS10_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ITS10_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for ITS10_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -246,19 +252,20 @@ impl<'a> ITS10_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
 #[doc = "Field `ITS9` reader - sets the interrupt type bit, indicates for edge or level"]
-pub struct ITS9_R(crate::FieldReader<bool, bool>);
+pub struct ITS9_R(crate::FieldReader<bool>);
 impl ITS9_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ITS9_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for ITS9_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -282,19 +289,20 @@ impl<'a> ITS9_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
 #[doc = "Field `ITS8` reader - sets the interrupt type bit, indicates for edge or level"]
-pub struct ITS8_R(crate::FieldReader<bool, bool>);
+pub struct ITS8_R(crate::FieldReader<bool>);
 impl ITS8_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ITS8_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for ITS8_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -318,19 +326,20 @@ impl<'a> ITS8_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
 #[doc = "Field `ITS7` reader - sets the interrupt type bit, indicates for edge or level"]
-pub struct ITS7_R(crate::FieldReader<bool, bool>);
+pub struct ITS7_R(crate::FieldReader<bool>);
 impl ITS7_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ITS7_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for ITS7_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -354,19 +363,20 @@ impl<'a> ITS7_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
 #[doc = "Field `ITS6` reader - sets the interrupt type bit, indicates for edge or level"]
-pub struct ITS6_R(crate::FieldReader<bool, bool>);
+pub struct ITS6_R(crate::FieldReader<bool>);
 impl ITS6_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ITS6_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for ITS6_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -390,19 +400,20 @@ impl<'a> ITS6_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
 #[doc = "Field `ITS5` reader - sets the interrupt type bit, indicates for edge or level"]
-pub struct ITS5_R(crate::FieldReader<bool, bool>);
+pub struct ITS5_R(crate::FieldReader<bool>);
 impl ITS5_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ITS5_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for ITS5_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -426,19 +437,20 @@ impl<'a> ITS5_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
 #[doc = "Field `ITS4` reader - sets the interrupt type bit, indicates for edge or level"]
-pub struct ITS4_R(crate::FieldReader<bool, bool>);
+pub struct ITS4_R(crate::FieldReader<bool>);
 impl ITS4_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ITS4_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for ITS4_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -462,19 +474,20 @@ impl<'a> ITS4_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
 #[doc = "Field `ITS3` reader - sets the interrupt type bit, indicates for edge or level"]
-pub struct ITS3_R(crate::FieldReader<bool, bool>);
+pub struct ITS3_R(crate::FieldReader<bool>);
 impl ITS3_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ITS3_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for ITS3_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -498,19 +511,20 @@ impl<'a> ITS3_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
 #[doc = "Field `ITS2` reader - sets the interrupt type bit, indicates for edge or level"]
-pub struct ITS2_R(crate::FieldReader<bool, bool>);
+pub struct ITS2_R(crate::FieldReader<bool>);
 impl ITS2_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ITS2_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for ITS2_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -534,19 +548,20 @@ impl<'a> ITS2_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
 #[doc = "Field `ITS1` reader - sets the interrupt type bit, indicates for edge or level"]
-pub struct ITS1_R(crate::FieldReader<bool, bool>);
+pub struct ITS1_R(crate::FieldReader<bool>);
 impl ITS1_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ITS1_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for ITS1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -570,19 +585,20 @@ impl<'a> ITS1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
 #[doc = "Field `ITS0` reader - sets the interrupt type bit, indicates for edge or level"]
-pub struct ITS0_R(crate::FieldReader<bool, bool>);
+pub struct ITS0_R(crate::FieldReader<bool>);
 impl ITS0_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ITS0_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for ITS0_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -606,7 +622,7 @@ impl<'a> ITS0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -614,82 +630,82 @@ impl R {
     #[doc = "Bit 15 - sets the interrupt type bit, indicates for edge or level"]
     #[inline(always)]
     pub fn its15(&self) -> ITS15_R {
-        ITS15_R::new(((self.bits >> 15) & 0x01) != 0)
+        ITS15_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 14 - sets the interrupt type bit, indicates for edge or level"]
     #[inline(always)]
     pub fn its14(&self) -> ITS14_R {
-        ITS14_R::new(((self.bits >> 14) & 0x01) != 0)
+        ITS14_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 13 - sets the interrupt type bit, indicates for edge or level"]
     #[inline(always)]
     pub fn its13(&self) -> ITS13_R {
-        ITS13_R::new(((self.bits >> 13) & 0x01) != 0)
+        ITS13_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 12 - sets the interrupt type bit, indicates for edge or level"]
     #[inline(always)]
     pub fn its12(&self) -> ITS12_R {
-        ITS12_R::new(((self.bits >> 12) & 0x01) != 0)
+        ITS12_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 11 - sets the interrupt type bit, indicates for edge or level"]
     #[inline(always)]
     pub fn its11(&self) -> ITS11_R {
-        ITS11_R::new(((self.bits >> 11) & 0x01) != 0)
+        ITS11_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 10 - sets the interrupt type bit, indicates for edge or level"]
     #[inline(always)]
     pub fn its10(&self) -> ITS10_R {
-        ITS10_R::new(((self.bits >> 10) & 0x01) != 0)
+        ITS10_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 9 - sets the interrupt type bit, indicates for edge or level"]
     #[inline(always)]
     pub fn its9(&self) -> ITS9_R {
-        ITS9_R::new(((self.bits >> 9) & 0x01) != 0)
+        ITS9_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 8 - sets the interrupt type bit, indicates for edge or level"]
     #[inline(always)]
     pub fn its8(&self) -> ITS8_R {
-        ITS8_R::new(((self.bits >> 8) & 0x01) != 0)
+        ITS8_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 7 - sets the interrupt type bit, indicates for edge or level"]
     #[inline(always)]
     pub fn its7(&self) -> ITS7_R {
-        ITS7_R::new(((self.bits >> 7) & 0x01) != 0)
+        ITS7_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 6 - sets the interrupt type bit, indicates for edge or level"]
     #[inline(always)]
     pub fn its6(&self) -> ITS6_R {
-        ITS6_R::new(((self.bits >> 6) & 0x01) != 0)
+        ITS6_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 5 - sets the interrupt type bit, indicates for edge or level"]
     #[inline(always)]
     pub fn its5(&self) -> ITS5_R {
-        ITS5_R::new(((self.bits >> 5) & 0x01) != 0)
+        ITS5_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 4 - sets the interrupt type bit, indicates for edge or level"]
     #[inline(always)]
     pub fn its4(&self) -> ITS4_R {
-        ITS4_R::new(((self.bits >> 4) & 0x01) != 0)
+        ITS4_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 3 - sets the interrupt type bit, indicates for edge or level"]
     #[inline(always)]
     pub fn its3(&self) -> ITS3_R {
-        ITS3_R::new(((self.bits >> 3) & 0x01) != 0)
+        ITS3_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 2 - sets the interrupt type bit, indicates for edge or level"]
     #[inline(always)]
     pub fn its2(&self) -> ITS2_R {
-        ITS2_R::new(((self.bits >> 2) & 0x01) != 0)
+        ITS2_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 1 - sets the interrupt type bit, indicates for edge or level"]
     #[inline(always)]
     pub fn its1(&self) -> ITS1_R {
-        ITS1_R::new(((self.bits >> 1) & 0x01) != 0)
+        ITS1_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 0 - sets the interrupt type bit, indicates for edge or level"]
     #[inline(always)]
     pub fn its0(&self) -> ITS0_R {
-        ITS0_R::new((self.bits & 0x01) != 0)
+        ITS0_R::new((self.bits & 1) != 0)
     }
 }
 impl W {

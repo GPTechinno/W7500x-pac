@@ -35,14 +35,15 @@ impl From<crate::W<LR_SPEC>> for W {
     }
 }
 #[doc = "Field `LR` reader - Limit"]
-pub struct LR_R(crate::FieldReader<u32, u32>);
+pub struct LR_R(crate::FieldReader<u32>);
 impl LR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
         LR_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for LR_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -56,7 +57,7 @@ impl<'a> LR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xffff_ffff) | (value as u32 & 0xffff_ffff);
+        self.w.bits = value;
         self.w
     }
 }
@@ -64,7 +65,7 @@ impl R {
     #[doc = "Bits 0:31 - Limit"]
     #[inline(always)]
     pub fn lr(&self) -> LR_R {
-        LR_R::new((self.bits & 0xffff_ffff) as u32)
+        LR_R::new(self.bits)
     }
 }
 impl W {

@@ -35,14 +35,15 @@ impl From<crate::W<SR_SPEC>> for W {
     }
 }
 #[doc = "Field `BSY` reader - SSP busy flag"]
-pub struct BSY_R(crate::FieldReader<bool, bool>);
+pub struct BSY_R(crate::FieldReader<bool>);
 impl BSY_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         BSY_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for BSY_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -66,19 +67,20 @@ impl<'a> BSY_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
 #[doc = "Field `RFF` reader - Receive FIFO full"]
-pub struct RFF_R(crate::FieldReader<bool, bool>);
+pub struct RFF_R(crate::FieldReader<bool>);
 impl RFF_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RFF_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for RFF_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -102,19 +104,20 @@ impl<'a> RFF_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
 #[doc = "Field `RNE` reader - Receive FIFO not empty"]
-pub struct RNE_R(crate::FieldReader<bool, bool>);
+pub struct RNE_R(crate::FieldReader<bool>);
 impl RNE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RNE_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for RNE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -138,19 +141,20 @@ impl<'a> RNE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
 #[doc = "Field `TNF` reader - Transmit FIFO not full"]
-pub struct TNF_R(crate::FieldReader<bool, bool>);
+pub struct TNF_R(crate::FieldReader<bool>);
 impl TNF_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TNF_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for TNF_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -174,19 +178,20 @@ impl<'a> TNF_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
 #[doc = "Field `TFE` reader - Transmit FIFO empty"]
-pub struct TFE_R(crate::FieldReader<bool, bool>);
+pub struct TFE_R(crate::FieldReader<bool>);
 impl TFE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TFE_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for TFE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -210,7 +215,7 @@ impl<'a> TFE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -218,27 +223,27 @@ impl R {
     #[doc = "Bit 4 - SSP busy flag"]
     #[inline(always)]
     pub fn bsy(&self) -> BSY_R {
-        BSY_R::new(((self.bits >> 4) & 0x01) != 0)
+        BSY_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 3 - Receive FIFO full"]
     #[inline(always)]
     pub fn rff(&self) -> RFF_R {
-        RFF_R::new(((self.bits >> 3) & 0x01) != 0)
+        RFF_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 2 - Receive FIFO not empty"]
     #[inline(always)]
     pub fn rne(&self) -> RNE_R {
-        RNE_R::new(((self.bits >> 2) & 0x01) != 0)
+        RNE_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 1 - Transmit FIFO not full"]
     #[inline(always)]
     pub fn tnf(&self) -> TNF_R {
-        TNF_R::new(((self.bits >> 1) & 0x01) != 0)
+        TNF_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 0 - Transmit FIFO empty"]
     #[inline(always)]
     pub fn tfe(&self) -> TFE_R {
-        TFE_R::new((self.bits & 0x01) != 0)
+        TFE_R::new((self.bits & 1) != 0)
     }
 }
 impl W {

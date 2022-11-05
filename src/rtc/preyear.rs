@@ -36,14 +36,15 @@ impl From<crate::W<PREYEAR_SPEC>> for W {
 }
 #[doc = "Field `PREYEAR` reader - PREYEAR\\[15:0\\]
 bits (RTC Predetermining Year value (0 to 4095))"]
-pub struct PREYEAR_R(crate::FieldReader<u16, u16>);
+pub struct PREYEAR_R(crate::FieldReader<u16>);
 impl PREYEAR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
         PREYEAR_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for PREYEAR_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

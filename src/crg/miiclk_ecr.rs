@@ -35,14 +35,15 @@ impl From<crate::W<MIICLK_ECR_SPEC>> for W {
     }
 }
 #[doc = "Field `EN_MIITEN` reader - MII TX Clock source enable flag"]
-pub struct EN_MIITEN_R(crate::FieldReader<bool, bool>);
+pub struct EN_MIITEN_R(crate::FieldReader<bool>);
 impl EN_MIITEN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EN_MIITEN_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for EN_MIITEN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -66,19 +67,20 @@ impl<'a> EN_MIITEN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
 #[doc = "Field `EN_MIIREN` reader - MII RX Clock source enable register flag"]
-pub struct EN_MIIREN_R(crate::FieldReader<bool, bool>);
+pub struct EN_MIIREN_R(crate::FieldReader<bool>);
 impl EN_MIIREN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EN_MIIREN_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for EN_MIIREN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -102,7 +104,7 @@ impl<'a> EN_MIIREN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -110,12 +112,12 @@ impl R {
     #[doc = "Bit 1 - MII TX Clock source enable flag"]
     #[inline(always)]
     pub fn en_miiten(&self) -> EN_MIITEN_R {
-        EN_MIITEN_R::new(((self.bits >> 1) & 0x01) != 0)
+        EN_MIITEN_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 0 - MII RX Clock source enable register flag"]
     #[inline(always)]
     pub fn en_miiren(&self) -> EN_MIIREN_R {
-        EN_MIIREN_R::new((self.bits & 0x01) != 0)
+        EN_MIIREN_R::new((self.bits & 1) != 0)
     }
 }
 impl W {

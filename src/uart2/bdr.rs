@@ -35,14 +35,15 @@ impl From<crate::W<BDR_SPEC>> for W {
     }
 }
 #[doc = "Field `BAUDDIV` reader - Baud rate divider"]
-pub struct BAUDDIV_R(crate::FieldReader<u32, u32>);
+pub struct BAUDDIV_R(crate::FieldReader<u32>);
 impl BAUDDIV_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
         BAUDDIV_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for BAUDDIV_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

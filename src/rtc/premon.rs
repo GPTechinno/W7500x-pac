@@ -36,14 +36,15 @@ impl From<crate::W<PREMON_SPEC>> for W {
 }
 #[doc = "Field `PREMON` reader - PREMON\\[3:0\\]
 bits (RTC Predetermining Month value (1 to 12))"]
-pub struct PREMON_R(crate::FieldReader<u8, u8>);
+pub struct PREMON_R(crate::FieldReader<u8>);
 impl PREMON_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         PREMON_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for PREMON_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

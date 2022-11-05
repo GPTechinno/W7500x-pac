@@ -50,8 +50,9 @@ impl From<FCKSRC_A> for u8 {
     }
 }
 #[doc = "Field `FCKSRC` reader - FCLK source select bits"]
-pub struct FCKSRC_R(crate::FieldReader<u8, FCKSRC_A>);
+pub struct FCKSRC_R(crate::FieldReader<u8>);
 impl FCKSRC_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         FCKSRC_R(crate::FieldReader::new(bits))
     }
@@ -76,7 +77,7 @@ impl FCKSRC_R {
     }
 }
 impl core::ops::Deref for FCKSRC_R {
-    type Target = crate::FieldReader<u8, FCKSRC_A>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -105,7 +106,7 @@ impl<'a> FCKSRC_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03) | (value as u32 & 0x03);
+        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
         self.w
     }
 }
@@ -113,7 +114,7 @@ impl R {
     #[doc = "Bits 0:1 - FCLK source select bits"]
     #[inline(always)]
     pub fn fcksrc(&self) -> FCKSRC_R {
-        FCKSRC_R::new((self.bits & 0x03) as u8)
+        FCKSRC_R::new((self.bits & 3) as u8)
     }
 }
 impl W {

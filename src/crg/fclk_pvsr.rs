@@ -54,8 +54,9 @@ impl From<FCKPRE_A> for u8 {
     }
 }
 #[doc = "Field `FCKPRE` reader - FCLK prescale value select bits"]
-pub struct FCKPRE_R(crate::FieldReader<u8, FCKPRE_A>);
+pub struct FCKPRE_R(crate::FieldReader<u8>);
 impl FCKPRE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         FCKPRE_R(crate::FieldReader::new(bits))
     }
@@ -92,7 +93,7 @@ impl FCKPRE_R {
     }
 }
 impl core::ops::Deref for FCKPRE_R {
-    type Target = crate::FieldReader<u8, FCKPRE_A>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -131,7 +132,7 @@ impl<'a> FCKPRE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03) | (value as u32 & 0x03);
+        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
         self.w
     }
 }
@@ -139,7 +140,7 @@ impl R {
     #[doc = "Bits 0:1 - FCLK prescale value select bits"]
     #[inline(always)]
     pub fn fckpre(&self) -> FCKPRE_R {
-        FCKPRE_R::new((self.bits & 0x03) as u8)
+        FCKPRE_R::new((self.bits & 3) as u8)
     }
 }
 impl W {

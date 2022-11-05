@@ -49,8 +49,9 @@ impl From<INTEN_A> for bool {
     }
 }
 #[doc = "Field `INTEN` reader - RTC Interrupt Enable"]
-pub struct INTEN_R(crate::FieldReader<bool, INTEN_A>);
+pub struct INTEN_R(crate::FieldReader<bool>);
 impl INTEN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         INTEN_R(crate::FieldReader::new(bits))
     }
@@ -74,7 +75,7 @@ impl INTEN_R {
     }
 }
 impl core::ops::Deref for INTEN_R {
-    type Target = crate::FieldReader<bool, INTEN_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -113,7 +114,7 @@ impl<'a> INTEN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -130,8 +131,9 @@ impl From<DIVRST_A> for bool {
     }
 }
 #[doc = "Field `DIVRST` reader - RTC Divider Reset"]
-pub struct DIVRST_R(crate::FieldReader<bool, DIVRST_A>);
+pub struct DIVRST_R(crate::FieldReader<bool>);
 impl DIVRST_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         DIVRST_R(crate::FieldReader::new(bits))
     }
@@ -150,7 +152,7 @@ impl DIVRST_R {
     }
 }
 impl core::ops::Deref for DIVRST_R {
-    type Target = crate::FieldReader<bool, DIVRST_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -184,7 +186,7 @@ impl<'a> DIVRST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -203,8 +205,9 @@ impl From<CLKEN_A> for bool {
     }
 }
 #[doc = "Field `CLKEN` reader - Clock Enable"]
-pub struct CLKEN_R(crate::FieldReader<bool, CLKEN_A>);
+pub struct CLKEN_R(crate::FieldReader<bool>);
 impl CLKEN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CLKEN_R(crate::FieldReader::new(bits))
     }
@@ -228,7 +231,7 @@ impl CLKEN_R {
     }
 }
 impl core::ops::Deref for CLKEN_R {
-    type Target = crate::FieldReader<bool, CLKEN_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -267,7 +270,7 @@ impl<'a> CLKEN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -275,17 +278,17 @@ impl R {
     #[doc = "Bit 5 - RTC Interrupt Enable"]
     #[inline(always)]
     pub fn inten(&self) -> INTEN_R {
-        INTEN_R::new(((self.bits >> 5) & 0x01) != 0)
+        INTEN_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 1 - RTC Divider Reset"]
     #[inline(always)]
     pub fn divrst(&self) -> DIVRST_R {
-        DIVRST_R::new(((self.bits >> 1) & 0x01) != 0)
+        DIVRST_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 0 - Clock Enable"]
     #[inline(always)]
     pub fn clken(&self) -> CLKEN_R {
-        CLKEN_R::new((self.bits & 0x01) != 0)
+        CLKEN_R::new((self.bits & 1) != 0)
     }
 }
 impl W {

@@ -14,14 +14,15 @@ impl From<crate::R<MIS_SPEC>> for R {
     }
 }
 #[doc = "Field `MIS` reader - Watchdog timer Masked Interrupt Status"]
-pub struct MIS_R(crate::FieldReader<bool, bool>);
+pub struct MIS_R(crate::FieldReader<bool>);
 impl MIS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         MIS_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for MIS_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -31,7 +32,7 @@ impl R {
     #[doc = "Bit 0 - Watchdog timer Masked Interrupt Status"]
     #[inline(always)]
     pub fn mis(&self) -> MIS_R {
-        MIS_R::new((self.bits & 0x01) != 0)
+        MIS_R::new((self.bits & 1) != 0)
     }
 }
 #[doc = "Watchdog timer Masked Interrupt Status register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [mis](index.html) module"]

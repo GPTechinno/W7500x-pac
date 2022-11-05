@@ -52,8 +52,9 @@ impl From<ERW_A> for u32 {
 }
 #[doc = "Field `ERW` reader - ERW\\[31:1\\]
 bits (Enable Register Writes)"]
-pub struct ERW_R(crate::FieldReader<u32, ERW_A>);
+pub struct ERW_R(crate::FieldReader<u32>);
 impl ERW_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
         ERW_R(crate::FieldReader::new(bits))
     }
@@ -78,7 +79,7 @@ impl ERW_R {
     }
 }
 impl core::ops::Deref for ERW_R {
-    type Target = crate::FieldReader<u32, ERW_A>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -127,8 +128,9 @@ impl From<WES_A> for bool {
     }
 }
 #[doc = "Field `WES` reader - Register Write Enable status"]
-pub struct WES_R(crate::FieldReader<bool, WES_A>);
+pub struct WES_R(crate::FieldReader<bool>);
 impl WES_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         WES_R(crate::FieldReader::new(bits))
     }
@@ -152,7 +154,7 @@ impl WES_R {
     }
 }
 impl core::ops::Deref for WES_R {
-    type Target = crate::FieldReader<bool, WES_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -191,7 +193,7 @@ impl<'a> WES_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -205,7 +207,7 @@ bits (Enable Register Writes)"]
     #[doc = "Bit 0 - Register Write Enable status"]
     #[inline(always)]
     pub fn wes(&self) -> WES_R {
-        WES_R::new((self.bits & 0x01) != 0)
+        WES_R::new((self.bits & 1) != 0)
     }
 }
 impl W {

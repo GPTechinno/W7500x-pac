@@ -36,14 +36,15 @@ impl From<crate::W<PREDAY_SPEC>> for W {
 }
 #[doc = "Field `PREDAY` reader - PREDAY\\[3:0\\]
 bits (RTC Predetermining Day of Week value (1 to 7))"]
-pub struct PREDAY_R(crate::FieldReader<u8, u8>);
+pub struct PREDAY_R(crate::FieldReader<u8>);
 impl PREDAY_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         PREDAY_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for PREDAY_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

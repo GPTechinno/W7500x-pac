@@ -14,14 +14,15 @@ impl From<crate::R<WAITONREQ_STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `DMA_WAITONREQ` reader - Channel wait on request status"]
-pub struct DMA_WAITONREQ_R(crate::FieldReader<u8, u8>);
+pub struct DMA_WAITONREQ_R(crate::FieldReader<u8>);
 impl DMA_WAITONREQ_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         DMA_WAITONREQ_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for DMA_WAITONREQ_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

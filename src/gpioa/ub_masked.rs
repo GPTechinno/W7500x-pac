@@ -35,14 +35,15 @@ impl From<crate::W<UB_MASKED_SPEC>> for W {
     }
 }
 #[doc = "Field `HBM` reader - Data for higher byte access"]
-pub struct HBM_R(crate::FieldReader<u8, u8>);
+pub struct HBM_R(crate::FieldReader<u8>);
 impl HBM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         HBM_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for HBM_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

@@ -49,8 +49,9 @@ impl From<DZE_A> for bool {
     }
 }
 #[doc = "Field `DZE` reader - Dead Zone Enable"]
-pub struct DZE_R(crate::FieldReader<bool, DZE_A>);
+pub struct DZE_R(crate::FieldReader<bool>);
 impl DZE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         DZE_R(crate::FieldReader::new(bits))
     }
@@ -74,7 +75,7 @@ impl DZE_R {
     }
 }
 impl core::ops::Deref for DZE_R {
-    type Target = crate::FieldReader<bool, DZE_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -113,7 +114,7 @@ impl<'a> DZE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -121,7 +122,7 @@ impl R {
     #[doc = "Bit 0 - Dead Zone Enable"]
     #[inline(always)]
     pub fn dze(&self) -> DZE_R {
-        DZE_R::new((self.bits & 0x01) != 0)
+        DZE_R::new((self.bits & 1) != 0)
     }
 }
 impl W {

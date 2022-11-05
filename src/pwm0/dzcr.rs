@@ -35,14 +35,15 @@ impl From<crate::W<DZCR_SPEC>> for W {
     }
 }
 #[doc = "Field `DZC` reader - Dead Zone Counter value"]
-pub struct DZC_R(crate::FieldReader<u16, u16>);
+pub struct DZC_R(crate::FieldReader<u16>);
 impl DZC_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
         DZC_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for DZC_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

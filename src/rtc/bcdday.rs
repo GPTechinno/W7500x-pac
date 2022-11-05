@@ -36,14 +36,15 @@ impl From<crate::W<BCDDAY_SPEC>> for W {
 }
 #[doc = "Field `BCDDAY` reader - BCDDAY\\[3:0\\]
 bits (RTC Day of Week value (1 to 7))"]
-pub struct BCDDAY_R(crate::FieldReader<u8, u8>);
+pub struct BCDDAY_R(crate::FieldReader<u8>);
 impl BCDDAY_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         BCDDAY_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for BCDDAY_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

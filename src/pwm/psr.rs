@@ -49,8 +49,9 @@ impl From<PS7_A> for bool {
     }
 }
 #[doc = "Field `PS7` reader - Channel 7"]
-pub struct PS7_R(crate::FieldReader<bool, PS7_A>);
+pub struct PS7_R(crate::FieldReader<bool>);
 impl PS7_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PS7_R(crate::FieldReader::new(bits))
     }
@@ -74,7 +75,7 @@ impl PS7_R {
     }
 }
 impl core::ops::Deref for PS7_R {
-    type Target = crate::FieldReader<bool, PS7_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -113,7 +114,7 @@ impl<'a> PS7_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -132,8 +133,9 @@ impl From<PS6_A> for bool {
     }
 }
 #[doc = "Field `PS6` reader - Channel 6"]
-pub struct PS6_R(crate::FieldReader<bool, PS6_A>);
+pub struct PS6_R(crate::FieldReader<bool>);
 impl PS6_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PS6_R(crate::FieldReader::new(bits))
     }
@@ -157,7 +159,7 @@ impl PS6_R {
     }
 }
 impl core::ops::Deref for PS6_R {
-    type Target = crate::FieldReader<bool, PS6_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -196,7 +198,7 @@ impl<'a> PS6_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -215,8 +217,9 @@ impl From<PS5_A> for bool {
     }
 }
 #[doc = "Field `PS5` reader - Channel 5"]
-pub struct PS5_R(crate::FieldReader<bool, PS5_A>);
+pub struct PS5_R(crate::FieldReader<bool>);
 impl PS5_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PS5_R(crate::FieldReader::new(bits))
     }
@@ -240,7 +243,7 @@ impl PS5_R {
     }
 }
 impl core::ops::Deref for PS5_R {
-    type Target = crate::FieldReader<bool, PS5_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -279,7 +282,7 @@ impl<'a> PS5_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -298,8 +301,9 @@ impl From<PS4_A> for bool {
     }
 }
 #[doc = "Field `PS4` reader - Channel 4"]
-pub struct PS4_R(crate::FieldReader<bool, PS4_A>);
+pub struct PS4_R(crate::FieldReader<bool>);
 impl PS4_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PS4_R(crate::FieldReader::new(bits))
     }
@@ -323,7 +327,7 @@ impl PS4_R {
     }
 }
 impl core::ops::Deref for PS4_R {
-    type Target = crate::FieldReader<bool, PS4_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -362,7 +366,7 @@ impl<'a> PS4_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -381,8 +385,9 @@ impl From<PS3_A> for bool {
     }
 }
 #[doc = "Field `PS3` reader - Channel 3"]
-pub struct PS3_R(crate::FieldReader<bool, PS3_A>);
+pub struct PS3_R(crate::FieldReader<bool>);
 impl PS3_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PS3_R(crate::FieldReader::new(bits))
     }
@@ -406,7 +411,7 @@ impl PS3_R {
     }
 }
 impl core::ops::Deref for PS3_R {
-    type Target = crate::FieldReader<bool, PS3_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -445,7 +450,7 @@ impl<'a> PS3_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -464,8 +469,9 @@ impl From<PS2_A> for bool {
     }
 }
 #[doc = "Field `PS2` reader - Channel 2"]
-pub struct PS2_R(crate::FieldReader<bool, PS2_A>);
+pub struct PS2_R(crate::FieldReader<bool>);
 impl PS2_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PS2_R(crate::FieldReader::new(bits))
     }
@@ -489,7 +495,7 @@ impl PS2_R {
     }
 }
 impl core::ops::Deref for PS2_R {
-    type Target = crate::FieldReader<bool, PS2_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -528,7 +534,7 @@ impl<'a> PS2_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -547,8 +553,9 @@ impl From<PS1_A> for bool {
     }
 }
 #[doc = "Field `PS1` reader - Channel 1"]
-pub struct PS1_R(crate::FieldReader<bool, PS1_A>);
+pub struct PS1_R(crate::FieldReader<bool>);
 impl PS1_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PS1_R(crate::FieldReader::new(bits))
     }
@@ -572,7 +579,7 @@ impl PS1_R {
     }
 }
 impl core::ops::Deref for PS1_R {
-    type Target = crate::FieldReader<bool, PS1_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -611,7 +618,7 @@ impl<'a> PS1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -630,8 +637,9 @@ impl From<PS0_A> for bool {
     }
 }
 #[doc = "Field `PS0` reader - Channel 0"]
-pub struct PS0_R(crate::FieldReader<bool, PS0_A>);
+pub struct PS0_R(crate::FieldReader<bool>);
 impl PS0_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PS0_R(crate::FieldReader::new(bits))
     }
@@ -655,7 +663,7 @@ impl PS0_R {
     }
 }
 impl core::ops::Deref for PS0_R {
-    type Target = crate::FieldReader<bool, PS0_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -694,7 +702,7 @@ impl<'a> PS0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -702,42 +710,42 @@ impl R {
     #[doc = "Bit 7 - Channel 7"]
     #[inline(always)]
     pub fn ps7(&self) -> PS7_R {
-        PS7_R::new(((self.bits >> 7) & 0x01) != 0)
+        PS7_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 6 - Channel 6"]
     #[inline(always)]
     pub fn ps6(&self) -> PS6_R {
-        PS6_R::new(((self.bits >> 6) & 0x01) != 0)
+        PS6_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 5 - Channel 5"]
     #[inline(always)]
     pub fn ps5(&self) -> PS5_R {
-        PS5_R::new(((self.bits >> 5) & 0x01) != 0)
+        PS5_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 4 - Channel 4"]
     #[inline(always)]
     pub fn ps4(&self) -> PS4_R {
-        PS4_R::new(((self.bits >> 4) & 0x01) != 0)
+        PS4_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 3 - Channel 3"]
     #[inline(always)]
     pub fn ps3(&self) -> PS3_R {
-        PS3_R::new(((self.bits >> 3) & 0x01) != 0)
+        PS3_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 2 - Channel 2"]
     #[inline(always)]
     pub fn ps2(&self) -> PS2_R {
-        PS2_R::new(((self.bits >> 2) & 0x01) != 0)
+        PS2_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 1 - Channel 1"]
     #[inline(always)]
     pub fn ps1(&self) -> PS1_R {
-        PS1_R::new(((self.bits >> 1) & 0x01) != 0)
+        PS1_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 0 - Channel 0"]
     #[inline(always)]
     pub fn ps0(&self) -> PS0_R {
-        PS0_R::new((self.bits & 0x01) != 0)
+        PS0_R::new((self.bits & 1) != 0)
     }
 }
 impl W {

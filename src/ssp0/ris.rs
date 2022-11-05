@@ -35,14 +35,15 @@ impl From<crate::W<RIS_SPEC>> for W {
     }
 }
 #[doc = "Field `TXRIS` reader - Transmit FIFO interrupt status"]
-pub struct TXRIS_R(crate::FieldReader<bool, bool>);
+pub struct TXRIS_R(crate::FieldReader<bool>);
 impl TXRIS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TXRIS_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for TXRIS_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -66,19 +67,20 @@ impl<'a> TXRIS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
 #[doc = "Field `RXRIS` reader - Receive FIFO interrupt status"]
-pub struct RXRIS_R(crate::FieldReader<bool, bool>);
+pub struct RXRIS_R(crate::FieldReader<bool>);
 impl RXRIS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RXRIS_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for RXRIS_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -102,19 +104,20 @@ impl<'a> RXRIS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
 #[doc = "Field `RTRIS` reader - Receive timeout interrupt status"]
-pub struct RTRIS_R(crate::FieldReader<bool, bool>);
+pub struct RTRIS_R(crate::FieldReader<bool>);
 impl RTRIS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RTRIS_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for RTRIS_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -138,19 +141,20 @@ impl<'a> RTRIS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
 #[doc = "Field `RORRIS` reader - Receive overrun interrupt status"]
-pub struct RORRIS_R(crate::FieldReader<bool, bool>);
+pub struct RORRIS_R(crate::FieldReader<bool>);
 impl RORRIS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RORRIS_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for RORRIS_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -174,7 +178,7 @@ impl<'a> RORRIS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -182,22 +186,22 @@ impl R {
     #[doc = "Bit 3 - Transmit FIFO interrupt status"]
     #[inline(always)]
     pub fn txris(&self) -> TXRIS_R {
-        TXRIS_R::new(((self.bits >> 3) & 0x01) != 0)
+        TXRIS_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 2 - Receive FIFO interrupt status"]
     #[inline(always)]
     pub fn rxris(&self) -> RXRIS_R {
-        RXRIS_R::new(((self.bits >> 2) & 0x01) != 0)
+        RXRIS_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 1 - Receive timeout interrupt status"]
     #[inline(always)]
     pub fn rtris(&self) -> RTRIS_R {
-        RTRIS_R::new(((self.bits >> 1) & 0x01) != 0)
+        RTRIS_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 0 - Receive overrun interrupt status"]
     #[inline(always)]
     pub fn rorris(&self) -> RORRIS_R {
-        RORRIS_R::new((self.bits & 0x01) != 0)
+        RORRIS_R::new((self.bits & 1) != 0)
     }
 }
 impl W {

@@ -35,14 +35,15 @@ impl From<crate::W<OUTENCLR_SPEC>> for W {
     }
 }
 #[doc = "Field `EC15` reader - clears the output enable bit, indicates the signal direction"]
-pub struct EC15_R(crate::FieldReader<bool, bool>);
+pub struct EC15_R(crate::FieldReader<bool>);
 impl EC15_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EC15_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for EC15_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -66,19 +67,20 @@ impl<'a> EC15_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u32 & 0x01) << 15);
+        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
         self.w
     }
 }
 #[doc = "Field `EC14` reader - clears the output enable bit, indicates the signal direction"]
-pub struct EC14_R(crate::FieldReader<bool, bool>);
+pub struct EC14_R(crate::FieldReader<bool>);
 impl EC14_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EC14_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for EC14_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -102,19 +104,20 @@ impl<'a> EC14_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | ((value as u32 & 0x01) << 14);
+        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
         self.w
     }
 }
 #[doc = "Field `EC13` reader - clears the output enable bit, indicates the signal direction"]
-pub struct EC13_R(crate::FieldReader<bool, bool>);
+pub struct EC13_R(crate::FieldReader<bool>);
 impl EC13_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EC13_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for EC13_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -138,19 +141,20 @@ impl<'a> EC13_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
         self.w
     }
 }
 #[doc = "Field `EC12` reader - clears the output enable bit, indicates the signal direction"]
-pub struct EC12_R(crate::FieldReader<bool, bool>);
+pub struct EC12_R(crate::FieldReader<bool>);
 impl EC12_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EC12_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for EC12_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -174,19 +178,20 @@ impl<'a> EC12_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
 #[doc = "Field `EC11` reader - clears the output enable bit, indicates the signal direction"]
-pub struct EC11_R(crate::FieldReader<bool, bool>);
+pub struct EC11_R(crate::FieldReader<bool>);
 impl EC11_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EC11_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for EC11_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -210,19 +215,20 @@ impl<'a> EC11_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
         self.w
     }
 }
 #[doc = "Field `EC10` reader - clears the output enable bit, indicates the signal direction"]
-pub struct EC10_R(crate::FieldReader<bool, bool>);
+pub struct EC10_R(crate::FieldReader<bool>);
 impl EC10_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EC10_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for EC10_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -246,19 +252,20 @@ impl<'a> EC10_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
 #[doc = "Field `EC9` reader - clears the output enable bit, indicates the signal direction"]
-pub struct EC9_R(crate::FieldReader<bool, bool>);
+pub struct EC9_R(crate::FieldReader<bool>);
 impl EC9_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EC9_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for EC9_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -282,19 +289,20 @@ impl<'a> EC9_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
 #[doc = "Field `EC8` reader - clears the output enable bit, indicates the signal direction"]
-pub struct EC8_R(crate::FieldReader<bool, bool>);
+pub struct EC8_R(crate::FieldReader<bool>);
 impl EC8_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EC8_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for EC8_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -318,19 +326,20 @@ impl<'a> EC8_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
 #[doc = "Field `EC7` reader - clears the output enable bit, indicates the signal direction"]
-pub struct EC7_R(crate::FieldReader<bool, bool>);
+pub struct EC7_R(crate::FieldReader<bool>);
 impl EC7_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EC7_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for EC7_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -354,19 +363,20 @@ impl<'a> EC7_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
 #[doc = "Field `EC6` reader - clears the output enable bit, indicates the signal direction"]
-pub struct EC6_R(crate::FieldReader<bool, bool>);
+pub struct EC6_R(crate::FieldReader<bool>);
 impl EC6_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EC6_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for EC6_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -390,19 +400,20 @@ impl<'a> EC6_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
 #[doc = "Field `EC5` reader - clears the output enable bit, indicates the signal direction"]
-pub struct EC5_R(crate::FieldReader<bool, bool>);
+pub struct EC5_R(crate::FieldReader<bool>);
 impl EC5_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EC5_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for EC5_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -426,19 +437,20 @@ impl<'a> EC5_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
 #[doc = "Field `EC4` reader - clears the output enable bit, indicates the signal direction"]
-pub struct EC4_R(crate::FieldReader<bool, bool>);
+pub struct EC4_R(crate::FieldReader<bool>);
 impl EC4_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EC4_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for EC4_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -462,19 +474,20 @@ impl<'a> EC4_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
 #[doc = "Field `EC3` reader - clears the output enable bit, indicates the signal direction"]
-pub struct EC3_R(crate::FieldReader<bool, bool>);
+pub struct EC3_R(crate::FieldReader<bool>);
 impl EC3_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EC3_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for EC3_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -498,19 +511,20 @@ impl<'a> EC3_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
 #[doc = "Field `EC2` reader - clears the output enable bit, indicates the signal direction"]
-pub struct EC2_R(crate::FieldReader<bool, bool>);
+pub struct EC2_R(crate::FieldReader<bool>);
 impl EC2_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EC2_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for EC2_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -534,19 +548,20 @@ impl<'a> EC2_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
 #[doc = "Field `EC1` reader - clears the output enable bit, indicates the signal direction"]
-pub struct EC1_R(crate::FieldReader<bool, bool>);
+pub struct EC1_R(crate::FieldReader<bool>);
 impl EC1_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EC1_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for EC1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -570,19 +585,20 @@ impl<'a> EC1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
 #[doc = "Field `EC0` reader - clears the output enable bit, indicates the signal direction"]
-pub struct EC0_R(crate::FieldReader<bool, bool>);
+pub struct EC0_R(crate::FieldReader<bool>);
 impl EC0_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EC0_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for EC0_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -606,7 +622,7 @@ impl<'a> EC0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -614,82 +630,82 @@ impl R {
     #[doc = "Bit 15 - clears the output enable bit, indicates the signal direction"]
     #[inline(always)]
     pub fn ec15(&self) -> EC15_R {
-        EC15_R::new(((self.bits >> 15) & 0x01) != 0)
+        EC15_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 14 - clears the output enable bit, indicates the signal direction"]
     #[inline(always)]
     pub fn ec14(&self) -> EC14_R {
-        EC14_R::new(((self.bits >> 14) & 0x01) != 0)
+        EC14_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 13 - clears the output enable bit, indicates the signal direction"]
     #[inline(always)]
     pub fn ec13(&self) -> EC13_R {
-        EC13_R::new(((self.bits >> 13) & 0x01) != 0)
+        EC13_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 12 - clears the output enable bit, indicates the signal direction"]
     #[inline(always)]
     pub fn ec12(&self) -> EC12_R {
-        EC12_R::new(((self.bits >> 12) & 0x01) != 0)
+        EC12_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 11 - clears the output enable bit, indicates the signal direction"]
     #[inline(always)]
     pub fn ec11(&self) -> EC11_R {
-        EC11_R::new(((self.bits >> 11) & 0x01) != 0)
+        EC11_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 10 - clears the output enable bit, indicates the signal direction"]
     #[inline(always)]
     pub fn ec10(&self) -> EC10_R {
-        EC10_R::new(((self.bits >> 10) & 0x01) != 0)
+        EC10_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 9 - clears the output enable bit, indicates the signal direction"]
     #[inline(always)]
     pub fn ec9(&self) -> EC9_R {
-        EC9_R::new(((self.bits >> 9) & 0x01) != 0)
+        EC9_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 8 - clears the output enable bit, indicates the signal direction"]
     #[inline(always)]
     pub fn ec8(&self) -> EC8_R {
-        EC8_R::new(((self.bits >> 8) & 0x01) != 0)
+        EC8_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 7 - clears the output enable bit, indicates the signal direction"]
     #[inline(always)]
     pub fn ec7(&self) -> EC7_R {
-        EC7_R::new(((self.bits >> 7) & 0x01) != 0)
+        EC7_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 6 - clears the output enable bit, indicates the signal direction"]
     #[inline(always)]
     pub fn ec6(&self) -> EC6_R {
-        EC6_R::new(((self.bits >> 6) & 0x01) != 0)
+        EC6_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 5 - clears the output enable bit, indicates the signal direction"]
     #[inline(always)]
     pub fn ec5(&self) -> EC5_R {
-        EC5_R::new(((self.bits >> 5) & 0x01) != 0)
+        EC5_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 4 - clears the output enable bit, indicates the signal direction"]
     #[inline(always)]
     pub fn ec4(&self) -> EC4_R {
-        EC4_R::new(((self.bits >> 4) & 0x01) != 0)
+        EC4_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 3 - clears the output enable bit, indicates the signal direction"]
     #[inline(always)]
     pub fn ec3(&self) -> EC3_R {
-        EC3_R::new(((self.bits >> 3) & 0x01) != 0)
+        EC3_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 2 - clears the output enable bit, indicates the signal direction"]
     #[inline(always)]
     pub fn ec2(&self) -> EC2_R {
-        EC2_R::new(((self.bits >> 2) & 0x01) != 0)
+        EC2_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 1 - clears the output enable bit, indicates the signal direction"]
     #[inline(always)]
     pub fn ec1(&self) -> EC1_R {
-        EC1_R::new(((self.bits >> 1) & 0x01) != 0)
+        EC1_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 0 - clears the output enable bit, indicates the signal direction"]
     #[inline(always)]
     pub fn ec0(&self) -> EC0_R {
-        EC0_R::new((self.bits & 0x01) != 0)
+        EC0_R::new((self.bits & 1) != 0)
     }
 }
 impl W {

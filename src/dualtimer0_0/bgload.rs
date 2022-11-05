@@ -35,14 +35,15 @@ impl From<crate::W<BGLOAD_SPEC>> for W {
     }
 }
 #[doc = "Field `BGL` reader - Background Load"]
-pub struct BGL_R(crate::FieldReader<u32, u32>);
+pub struct BGL_R(crate::FieldReader<u32>);
 impl BGL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
         BGL_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for BGL_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -56,7 +57,7 @@ impl<'a> BGL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xffff_ffff) | (value as u32 & 0xffff_ffff);
+        self.w.bits = value;
         self.w
     }
 }
@@ -64,7 +65,7 @@ impl R {
     #[doc = "Bits 0:31 - Background Load"]
     #[inline(always)]
     pub fn bgl(&self) -> BGL_R {
-        BGL_R::new((self.bits & 0xffff_ffff) as u32)
+        BGL_R::new(self.bits)
     }
 }
 impl W {

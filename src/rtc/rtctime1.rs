@@ -15,14 +15,15 @@ impl From<crate::R<RTCTIME1_SPEC>> for R {
 }
 #[doc = "Field `CBCDYEAR` reader - CBCDYEAR\\[31:16\\]
 bits (RTC Consolidated Year value (0 to 4095))"]
-pub struct CBCDYEAR_R(crate::FieldReader<u16, u16>);
+pub struct CBCDYEAR_R(crate::FieldReader<u16>);
 impl CBCDYEAR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
         CBCDYEAR_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for CBCDYEAR_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -30,14 +31,15 @@ impl core::ops::Deref for CBCDYEAR_R {
 }
 #[doc = "Field `CBCDMON` reader - CBCDMON\\[12:8\\]
 bits (RTC Consolidated Month value (1 to 12))"]
-pub struct CBCDMON_R(crate::FieldReader<u8, u8>);
+pub struct CBCDMON_R(crate::FieldReader<u8>);
 impl CBCDMON_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         CBCDMON_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for CBCDMON_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -45,14 +47,15 @@ impl core::ops::Deref for CBCDMON_R {
 }
 #[doc = "Field `CBCDDATE` reader - CBCDDATE\\[5:0\\]
 bits (RTC Consolidated Day of Month value (1 to 28, 29, 30, or 31))"]
-pub struct CBCDDATE_R(crate::FieldReader<u8, u8>);
+pub struct CBCDDATE_R(crate::FieldReader<u8>);
 impl CBCDDATE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         CBCDDATE_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for CBCDDATE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

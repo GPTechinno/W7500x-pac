@@ -36,14 +36,15 @@ impl From<crate::W<BCDSEC_SPEC>> for W {
 }
 #[doc = "Field `BCDSEC` reader - BCDSEC\\[6:0\\]
 bits (RTC Seconds value (0 to 59))"]
-pub struct BCDSEC_R(crate::FieldReader<u8, u8>);
+pub struct BCDSEC_R(crate::FieldReader<u8>);
 impl BCDSEC_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         BCDSEC_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for BCDSEC_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

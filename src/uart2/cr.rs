@@ -35,14 +35,15 @@ impl From<crate::W<CR_SPEC>> for W {
     }
 }
 #[doc = "Field `ROIE` reader - RX overrun interrupt enable"]
-pub struct ROIE_R(crate::FieldReader<bool, bool>);
+pub struct ROIE_R(crate::FieldReader<bool>);
 impl ROIE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ROIE_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for ROIE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -66,19 +67,20 @@ impl<'a> ROIE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
 #[doc = "Field `TOIE` reader - TX overrun interrupt enable"]
-pub struct TOIE_R(crate::FieldReader<bool, bool>);
+pub struct TOIE_R(crate::FieldReader<bool>);
 impl TOIE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TOIE_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for TOIE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -102,19 +104,20 @@ impl<'a> TOIE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
 #[doc = "Field `RXIE` reader - RX interrupt enable"]
-pub struct RXIE_R(crate::FieldReader<bool, bool>);
+pub struct RXIE_R(crate::FieldReader<bool>);
 impl RXIE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RXIE_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for RXIE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -138,19 +141,20 @@ impl<'a> RXIE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
 #[doc = "Field `TXIE` reader - TX interrupt enable"]
-pub struct TXIE_R(crate::FieldReader<bool, bool>);
+pub struct TXIE_R(crate::FieldReader<bool>);
 impl TXIE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TXIE_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for TXIE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -174,19 +178,20 @@ impl<'a> TXIE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
 #[doc = "Field `RXE` reader - RX enable"]
-pub struct RXE_R(crate::FieldReader<bool, bool>);
+pub struct RXE_R(crate::FieldReader<bool>);
 impl RXE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RXE_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for RXE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -210,19 +215,20 @@ impl<'a> RXE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
 #[doc = "Field `TXE` reader - TX enable"]
-pub struct TXE_R(crate::FieldReader<bool, bool>);
+pub struct TXE_R(crate::FieldReader<bool>);
 impl TXE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TXE_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for TXE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -246,7 +252,7 @@ impl<'a> TXE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -254,32 +260,32 @@ impl R {
     #[doc = "Bit 5 - RX overrun interrupt enable"]
     #[inline(always)]
     pub fn roie(&self) -> ROIE_R {
-        ROIE_R::new(((self.bits >> 5) & 0x01) != 0)
+        ROIE_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 4 - TX overrun interrupt enable"]
     #[inline(always)]
     pub fn toie(&self) -> TOIE_R {
-        TOIE_R::new(((self.bits >> 4) & 0x01) != 0)
+        TOIE_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 3 - RX interrupt enable"]
     #[inline(always)]
     pub fn rxie(&self) -> RXIE_R {
-        RXIE_R::new(((self.bits >> 3) & 0x01) != 0)
+        RXIE_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 2 - TX interrupt enable"]
     #[inline(always)]
     pub fn txie(&self) -> TXIE_R {
-        TXIE_R::new(((self.bits >> 2) & 0x01) != 0)
+        TXIE_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 1 - RX enable"]
     #[inline(always)]
     pub fn rxe(&self) -> RXE_R {
-        RXE_R::new(((self.bits >> 1) & 0x01) != 0)
+        RXE_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 0 - TX enable"]
     #[inline(always)]
     pub fn txe(&self) -> TXE_R {
-        TXE_R::new((self.bits & 0x01) != 0)
+        TXE_R::new((self.bits & 1) != 0)
     }
 }
 impl W {

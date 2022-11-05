@@ -56,8 +56,9 @@ impl From<RXIFLSEL_A> for u8 {
     }
 }
 #[doc = "Field `RXIFLSEL` reader - Receive interrupt FIFO level select"]
-pub struct RXIFLSEL_R(crate::FieldReader<u8, RXIFLSEL_A>);
+pub struct RXIFLSEL_R(crate::FieldReader<u8>);
 impl RXIFLSEL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         RXIFLSEL_R(crate::FieldReader::new(bits))
     }
@@ -100,7 +101,7 @@ impl RXIFLSEL_R {
     }
 }
 impl core::ops::Deref for RXIFLSEL_R {
-    type Target = crate::FieldReader<u8, RXIFLSEL_A>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -144,7 +145,7 @@ impl<'a> RXIFLSEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 3)) | ((value as u32 & 0x07) << 3);
+        self.w.bits = (self.w.bits & !(7 << 3)) | ((value as u32 & 7) << 3);
         self.w
     }
 }
@@ -170,8 +171,9 @@ impl From<TXIFLSEL_A> for u8 {
     }
 }
 #[doc = "Field `TXIFLSEL` reader - Transmit interrupt FIFO level select"]
-pub struct TXIFLSEL_R(crate::FieldReader<u8, TXIFLSEL_A>);
+pub struct TXIFLSEL_R(crate::FieldReader<u8>);
 impl TXIFLSEL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         TXIFLSEL_R(crate::FieldReader::new(bits))
     }
@@ -214,7 +216,7 @@ impl TXIFLSEL_R {
     }
 }
 impl core::ops::Deref for TXIFLSEL_R {
-    type Target = crate::FieldReader<u8, TXIFLSEL_A>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -258,7 +260,7 @@ impl<'a> TXIFLSEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x07) | (value as u32 & 0x07);
+        self.w.bits = (self.w.bits & !7) | (value as u32 & 7);
         self.w
     }
 }
@@ -266,12 +268,12 @@ impl R {
     #[doc = "Bits 3:5 - Receive interrupt FIFO level select"]
     #[inline(always)]
     pub fn rxiflsel(&self) -> RXIFLSEL_R {
-        RXIFLSEL_R::new(((self.bits >> 3) & 0x07) as u8)
+        RXIFLSEL_R::new(((self.bits >> 3) & 7) as u8)
     }
     #[doc = "Bits 0:2 - Transmit interrupt FIFO level select"]
     #[inline(always)]
     pub fn txiflsel(&self) -> TXIFLSEL_R {
-        TXIFLSEL_R::new((self.bits & 0x07) as u8)
+        TXIFLSEL_R::new((self.bits & 7) as u8)
     }
 }
 impl W {

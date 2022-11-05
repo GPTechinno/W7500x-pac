@@ -49,8 +49,9 @@ impl From<OSCPD_A> for bool {
     }
 }
 #[doc = "Field `OSCPD` reader - Internal 8MHz RC oscillator power down flag"]
-pub struct OSCPD_R(crate::FieldReader<bool, OSCPD_A>);
+pub struct OSCPD_R(crate::FieldReader<bool>);
 impl OSCPD_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         OSCPD_R(crate::FieldReader::new(bits))
     }
@@ -74,7 +75,7 @@ impl OSCPD_R {
     }
 }
 impl core::ops::Deref for OSCPD_R {
-    type Target = crate::FieldReader<bool, OSCPD_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -113,7 +114,7 @@ impl<'a> OSCPD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -121,7 +122,7 @@ impl R {
     #[doc = "Bit 0 - Internal 8MHz RC oscillator power down flag"]
     #[inline(always)]
     pub fn oscpd(&self) -> OSCPD_R {
-        OSCPD_R::new((self.bits & 0x01) != 0)
+        OSCPD_R::new((self.bits & 1) != 0)
     }
 }
 impl W {

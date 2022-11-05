@@ -35,14 +35,15 @@ impl From<crate::W<DMACR_SPEC>> for W {
     }
 }
 #[doc = "Field `TXDMAE` reader - Receive DMA Enable"]
-pub struct TXDMAE_R(crate::FieldReader<bool, bool>);
+pub struct TXDMAE_R(crate::FieldReader<bool>);
 impl TXDMAE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TXDMAE_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for TXDMAE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -66,19 +67,20 @@ impl<'a> TXDMAE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
 #[doc = "Field `RXDMAE` reader - Transmit DMA Enable"]
-pub struct RXDMAE_R(crate::FieldReader<bool, bool>);
+pub struct RXDMAE_R(crate::FieldReader<bool>);
 impl RXDMAE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RXDMAE_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for RXDMAE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -102,7 +104,7 @@ impl<'a> RXDMAE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -110,12 +112,12 @@ impl R {
     #[doc = "Bit 0 - Receive DMA Enable"]
     #[inline(always)]
     pub fn txdmae(&self) -> TXDMAE_R {
-        TXDMAE_R::new((self.bits & 0x01) != 0)
+        TXDMAE_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Transmit DMA Enable"]
     #[inline(always)]
     pub fn rxdmae(&self) -> RXDMAE_R {
-        RXDMAE_R::new(((self.bits >> 1) & 0x01) != 0)
+        RXDMAE_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
 impl W {

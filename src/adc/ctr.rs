@@ -49,8 +49,9 @@ impl From<PWD_A> for bool {
     }
 }
 #[doc = "Field `PWD` reader - power down flag"]
-pub struct PWD_R(crate::FieldReader<bool, PWD_A>);
+pub struct PWD_R(crate::FieldReader<bool>);
 impl PWD_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PWD_R(crate::FieldReader::new(bits))
     }
@@ -74,7 +75,7 @@ impl PWD_R {
     }
 }
 impl core::ops::Deref for PWD_R {
-    type Target = crate::FieldReader<bool, PWD_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -113,7 +114,7 @@ impl<'a> PWD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -132,8 +133,9 @@ impl From<SMPSEL_A> for bool {
     }
 }
 #[doc = "Field `SMPSEL` reader - Sampling mode"]
-pub struct SMPSEL_R(crate::FieldReader<bool, SMPSEL_A>);
+pub struct SMPSEL_R(crate::FieldReader<bool>);
 impl SMPSEL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SMPSEL_R(crate::FieldReader::new(bits))
     }
@@ -157,7 +159,7 @@ impl SMPSEL_R {
     }
 }
 impl core::ops::Deref for SMPSEL_R {
-    type Target = crate::FieldReader<bool, SMPSEL_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -196,7 +198,7 @@ impl<'a> SMPSEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -204,12 +206,12 @@ impl R {
     #[doc = "Bit 1 - power down flag"]
     #[inline(always)]
     pub fn pwd(&self) -> PWD_R {
-        PWD_R::new(((self.bits >> 1) & 0x01) != 0)
+        PWD_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 0 - Sampling mode"]
     #[inline(always)]
     pub fn smpsel(&self) -> SMPSEL_R {
-        SMPSEL_R::new((self.bits & 0x01) != 0)
+        SMPSEL_R::new((self.bits & 1) != 0)
     }
 }
 impl W {

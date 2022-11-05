@@ -35,14 +35,15 @@ impl From<crate::W<INTTYPECLR_SPEC>> for W {
     }
 }
 #[doc = "Field `ITC15` reader - clears the interrupt type bit, indicates for edge or level"]
-pub struct ITC15_R(crate::FieldReader<bool, bool>);
+pub struct ITC15_R(crate::FieldReader<bool>);
 impl ITC15_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ITC15_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for ITC15_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -66,19 +67,20 @@ impl<'a> ITC15_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u32 & 0x01) << 15);
+        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
         self.w
     }
 }
 #[doc = "Field `ITC14` reader - clears the interrupt type bit, indicates for edge or level"]
-pub struct ITC14_R(crate::FieldReader<bool, bool>);
+pub struct ITC14_R(crate::FieldReader<bool>);
 impl ITC14_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ITC14_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for ITC14_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -102,19 +104,20 @@ impl<'a> ITC14_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | ((value as u32 & 0x01) << 14);
+        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
         self.w
     }
 }
 #[doc = "Field `ITC13` reader - clears the interrupt type bit, indicates for edge or level"]
-pub struct ITC13_R(crate::FieldReader<bool, bool>);
+pub struct ITC13_R(crate::FieldReader<bool>);
 impl ITC13_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ITC13_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for ITC13_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -138,19 +141,20 @@ impl<'a> ITC13_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
         self.w
     }
 }
 #[doc = "Field `ITC12` reader - clears the interrupt type bit, indicates for edge or level"]
-pub struct ITC12_R(crate::FieldReader<bool, bool>);
+pub struct ITC12_R(crate::FieldReader<bool>);
 impl ITC12_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ITC12_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for ITC12_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -174,19 +178,20 @@ impl<'a> ITC12_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
 #[doc = "Field `ITC11` reader - clears the interrupt type bit, indicates for edge or level"]
-pub struct ITC11_R(crate::FieldReader<bool, bool>);
+pub struct ITC11_R(crate::FieldReader<bool>);
 impl ITC11_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ITC11_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for ITC11_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -210,19 +215,20 @@ impl<'a> ITC11_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
         self.w
     }
 }
 #[doc = "Field `ITC10` reader - clears the interrupt type bit, indicates for edge or level"]
-pub struct ITC10_R(crate::FieldReader<bool, bool>);
+pub struct ITC10_R(crate::FieldReader<bool>);
 impl ITC10_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ITC10_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for ITC10_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -246,19 +252,20 @@ impl<'a> ITC10_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
 #[doc = "Field `ITC9` reader - clears the interrupt type bit, indicates for edge or level"]
-pub struct ITC9_R(crate::FieldReader<bool, bool>);
+pub struct ITC9_R(crate::FieldReader<bool>);
 impl ITC9_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ITC9_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for ITC9_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -282,19 +289,20 @@ impl<'a> ITC9_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
 #[doc = "Field `ITC8` reader - clears the interrupt type bit, indicates for edge or level"]
-pub struct ITC8_R(crate::FieldReader<bool, bool>);
+pub struct ITC8_R(crate::FieldReader<bool>);
 impl ITC8_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ITC8_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for ITC8_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -318,19 +326,20 @@ impl<'a> ITC8_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
 #[doc = "Field `ITC7` reader - clears the interrupt type bit, indicates for edge or level"]
-pub struct ITC7_R(crate::FieldReader<bool, bool>);
+pub struct ITC7_R(crate::FieldReader<bool>);
 impl ITC7_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ITC7_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for ITC7_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -354,19 +363,20 @@ impl<'a> ITC7_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
 #[doc = "Field `ITC6` reader - clears the interrupt type bit, indicates for edge or level"]
-pub struct ITC6_R(crate::FieldReader<bool, bool>);
+pub struct ITC6_R(crate::FieldReader<bool>);
 impl ITC6_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ITC6_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for ITC6_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -390,19 +400,20 @@ impl<'a> ITC6_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
 #[doc = "Field `ITC5` reader - clears the interrupt type bit, indicates for edge or level"]
-pub struct ITC5_R(crate::FieldReader<bool, bool>);
+pub struct ITC5_R(crate::FieldReader<bool>);
 impl ITC5_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ITC5_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for ITC5_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -426,19 +437,20 @@ impl<'a> ITC5_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
 #[doc = "Field `ITC4` reader - clears the interrupt type bit, indicates for edge or level"]
-pub struct ITC4_R(crate::FieldReader<bool, bool>);
+pub struct ITC4_R(crate::FieldReader<bool>);
 impl ITC4_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ITC4_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for ITC4_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -462,19 +474,20 @@ impl<'a> ITC4_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
 #[doc = "Field `ITC3` reader - clears the interrupt type bit, indicates for edge or level"]
-pub struct ITC3_R(crate::FieldReader<bool, bool>);
+pub struct ITC3_R(crate::FieldReader<bool>);
 impl ITC3_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ITC3_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for ITC3_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -498,19 +511,20 @@ impl<'a> ITC3_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
 #[doc = "Field `ITC2` reader - clears the interrupt type bit, indicates for edge or level"]
-pub struct ITC2_R(crate::FieldReader<bool, bool>);
+pub struct ITC2_R(crate::FieldReader<bool>);
 impl ITC2_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ITC2_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for ITC2_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -534,19 +548,20 @@ impl<'a> ITC2_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
 #[doc = "Field `ITC1` reader - clears the interrupt type bit, indicates for edge or level"]
-pub struct ITC1_R(crate::FieldReader<bool, bool>);
+pub struct ITC1_R(crate::FieldReader<bool>);
 impl ITC1_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ITC1_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for ITC1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -570,19 +585,20 @@ impl<'a> ITC1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
 #[doc = "Field `ITC0` reader - clears the interrupt type bit, indicates for edge or level"]
-pub struct ITC0_R(crate::FieldReader<bool, bool>);
+pub struct ITC0_R(crate::FieldReader<bool>);
 impl ITC0_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ITC0_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for ITC0_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -606,7 +622,7 @@ impl<'a> ITC0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -614,82 +630,82 @@ impl R {
     #[doc = "Bit 15 - clears the interrupt type bit, indicates for edge or level"]
     #[inline(always)]
     pub fn itc15(&self) -> ITC15_R {
-        ITC15_R::new(((self.bits >> 15) & 0x01) != 0)
+        ITC15_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 14 - clears the interrupt type bit, indicates for edge or level"]
     #[inline(always)]
     pub fn itc14(&self) -> ITC14_R {
-        ITC14_R::new(((self.bits >> 14) & 0x01) != 0)
+        ITC14_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 13 - clears the interrupt type bit, indicates for edge or level"]
     #[inline(always)]
     pub fn itc13(&self) -> ITC13_R {
-        ITC13_R::new(((self.bits >> 13) & 0x01) != 0)
+        ITC13_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 12 - clears the interrupt type bit, indicates for edge or level"]
     #[inline(always)]
     pub fn itc12(&self) -> ITC12_R {
-        ITC12_R::new(((self.bits >> 12) & 0x01) != 0)
+        ITC12_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 11 - clears the interrupt type bit, indicates for edge or level"]
     #[inline(always)]
     pub fn itc11(&self) -> ITC11_R {
-        ITC11_R::new(((self.bits >> 11) & 0x01) != 0)
+        ITC11_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 10 - clears the interrupt type bit, indicates for edge or level"]
     #[inline(always)]
     pub fn itc10(&self) -> ITC10_R {
-        ITC10_R::new(((self.bits >> 10) & 0x01) != 0)
+        ITC10_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 9 - clears the interrupt type bit, indicates for edge or level"]
     #[inline(always)]
     pub fn itc9(&self) -> ITC9_R {
-        ITC9_R::new(((self.bits >> 9) & 0x01) != 0)
+        ITC9_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 8 - clears the interrupt type bit, indicates for edge or level"]
     #[inline(always)]
     pub fn itc8(&self) -> ITC8_R {
-        ITC8_R::new(((self.bits >> 8) & 0x01) != 0)
+        ITC8_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 7 - clears the interrupt type bit, indicates for edge or level"]
     #[inline(always)]
     pub fn itc7(&self) -> ITC7_R {
-        ITC7_R::new(((self.bits >> 7) & 0x01) != 0)
+        ITC7_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 6 - clears the interrupt type bit, indicates for edge or level"]
     #[inline(always)]
     pub fn itc6(&self) -> ITC6_R {
-        ITC6_R::new(((self.bits >> 6) & 0x01) != 0)
+        ITC6_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 5 - clears the interrupt type bit, indicates for edge or level"]
     #[inline(always)]
     pub fn itc5(&self) -> ITC5_R {
-        ITC5_R::new(((self.bits >> 5) & 0x01) != 0)
+        ITC5_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 4 - clears the interrupt type bit, indicates for edge or level"]
     #[inline(always)]
     pub fn itc4(&self) -> ITC4_R {
-        ITC4_R::new(((self.bits >> 4) & 0x01) != 0)
+        ITC4_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 3 - clears the interrupt type bit, indicates for edge or level"]
     #[inline(always)]
     pub fn itc3(&self) -> ITC3_R {
-        ITC3_R::new(((self.bits >> 3) & 0x01) != 0)
+        ITC3_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 2 - clears the interrupt type bit, indicates for edge or level"]
     #[inline(always)]
     pub fn itc2(&self) -> ITC2_R {
-        ITC2_R::new(((self.bits >> 2) & 0x01) != 0)
+        ITC2_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 1 - clears the interrupt type bit, indicates for edge or level"]
     #[inline(always)]
     pub fn itc1(&self) -> ITC1_R {
-        ITC1_R::new(((self.bits >> 1) & 0x01) != 0)
+        ITC1_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 0 - clears the interrupt type bit, indicates for edge or level"]
     #[inline(always)]
     pub fn itc0(&self) -> ITC0_R {
-        ITC0_R::new((self.bits & 0x01) != 0)
+        ITC0_R::new((self.bits & 1) != 0)
     }
 }
 impl W {

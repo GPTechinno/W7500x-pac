@@ -37,14 +37,15 @@ impl From<crate::W<CHNL_REQ_MASK_SET_SPEC>> for W {
 #[doc = "Field `CHNL_REQ_MASK_SET` reader - CHNL_REQ_MASK_SET\\[5:0\\]
 bits (Returns the request mask status of dma_req\\[Channel-1\\]
 and dma_sreq\\[Channel-1\\], or disables the corresponding channel from generating DMA requests)"]
-pub struct CHNL_REQ_MASK_SET_R(crate::FieldReader<u8, u8>);
+pub struct CHNL_REQ_MASK_SET_R(crate::FieldReader<u8>);
 impl CHNL_REQ_MASK_SET_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         CHNL_REQ_MASK_SET_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for CHNL_REQ_MASK_SET_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

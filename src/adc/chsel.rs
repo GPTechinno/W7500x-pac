@@ -66,8 +66,9 @@ impl From<CHSEL_A> for u8 {
     }
 }
 #[doc = "Field `CHSEL` reader - ADC Channel Select bits"]
-pub struct CHSEL_R(crate::FieldReader<u8, CHSEL_A>);
+pub struct CHSEL_R(crate::FieldReader<u8>);
 impl CHSEL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         CHSEL_R(crate::FieldReader::new(bits))
     }
@@ -140,7 +141,7 @@ impl CHSEL_R {
     }
 }
 impl core::ops::Deref for CHSEL_R {
-    type Target = crate::FieldReader<u8, CHSEL_A>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

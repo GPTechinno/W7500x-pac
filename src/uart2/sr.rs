@@ -35,14 +35,15 @@ impl From<crate::W<SR_SPEC>> for W {
     }
 }
 #[doc = "Field `RXO` reader - RX buffer overrun, wirte 1 to clear"]
-pub struct RXO_R(crate::FieldReader<bool, bool>);
+pub struct RXO_R(crate::FieldReader<bool>);
 impl RXO_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RXO_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for RXO_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -66,19 +67,20 @@ impl<'a> RXO_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
 #[doc = "Field `TXO` reader - TX buffer overrun, wirte 1 to clear"]
-pub struct TXO_R(crate::FieldReader<bool, bool>);
+pub struct TXO_R(crate::FieldReader<bool>);
 impl TXO_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TXO_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for TXO_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -102,19 +104,20 @@ impl<'a> TXO_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
 #[doc = "Field `RXBF` reader - RX buffer full, read only"]
-pub struct RXBF_R(crate::FieldReader<bool, bool>);
+pub struct RXBF_R(crate::FieldReader<bool>);
 impl RXBF_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RXBF_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for RXBF_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -138,19 +141,20 @@ impl<'a> RXBF_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
 #[doc = "Field `TXBF` reader - TX buffer full, read only"]
-pub struct TXBF_R(crate::FieldReader<bool, bool>);
+pub struct TXBF_R(crate::FieldReader<bool>);
 impl TXBF_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TXBF_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for TXBF_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -174,7 +178,7 @@ impl<'a> TXBF_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -182,22 +186,22 @@ impl R {
     #[doc = "Bit 3 - RX buffer overrun, wirte 1 to clear"]
     #[inline(always)]
     pub fn rxo(&self) -> RXO_R {
-        RXO_R::new(((self.bits >> 3) & 0x01) != 0)
+        RXO_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 2 - TX buffer overrun, wirte 1 to clear"]
     #[inline(always)]
     pub fn txo(&self) -> TXO_R {
-        TXO_R::new(((self.bits >> 2) & 0x01) != 0)
+        TXO_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 1 - RX buffer full, read only"]
     #[inline(always)]
     pub fn rxbf(&self) -> RXBF_R {
-        RXBF_R::new(((self.bits >> 1) & 0x01) != 0)
+        RXBF_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 0 - TX buffer full, read only"]
     #[inline(always)]
     pub fn txbf(&self) -> TXBF_R {
-        TXBF_R::new((self.bits & 0x01) != 0)
+        TXBF_R::new((self.bits & 1) != 0)
     }
 }
 impl W {

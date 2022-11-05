@@ -35,14 +35,15 @@ impl From<crate::W<PR_SPEC>> for W {
     }
 }
 #[doc = "Field `PR` reader - Prescale"]
-pub struct PR_R(crate::FieldReader<u8, u8>);
+pub struct PR_R(crate::FieldReader<u8>);
 impl PR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         PR_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for PR_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

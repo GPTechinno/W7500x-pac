@@ -49,8 +49,9 @@ impl From<CM_A> for bool {
     }
 }
 #[doc = "Field `CM` reader - Capture mode"]
-pub struct CM_R(crate::FieldReader<bool, CM_A>);
+pub struct CM_R(crate::FieldReader<bool>);
 impl CM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CM_R(crate::FieldReader::new(bits))
     }
@@ -74,7 +75,7 @@ impl CM_R {
     }
 }
 impl core::ops::Deref for CM_R {
-    type Target = crate::FieldReader<bool, CM_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -113,7 +114,7 @@ impl<'a> CM_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -121,7 +122,7 @@ impl R {
     #[doc = "Bit 0 - Capture mode"]
     #[inline(always)]
     pub fn cm(&self) -> CM_R {
-        CM_R::new((self.bits & 0x01) != 0)
+        CM_R::new((self.bits & 1) != 0)
     }
 }
 impl W {

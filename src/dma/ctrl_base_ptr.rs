@@ -35,14 +35,15 @@ impl From<crate::W<CTRL_BASE_PTR_SPEC>> for W {
     }
 }
 #[doc = "Field `CTRL_BASE_PTR` reader - Pointer to the base address of the primary data structure"]
-pub struct CTRL_BASE_PTR_R(crate::FieldReader<u32, u32>);
+pub struct CTRL_BASE_PTR_R(crate::FieldReader<u32>);
 impl CTRL_BASE_PTR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
         CTRL_BASE_PTR_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for CTRL_BASE_PTR_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

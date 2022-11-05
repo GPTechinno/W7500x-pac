@@ -45,8 +45,9 @@ impl From<STATE_A> for u8 {
     }
 }
 #[doc = "Field `STATE` reader - Current state of the control state machine"]
-pub struct STATE_R(crate::FieldReader<u8, STATE_A>);
+pub struct STATE_R(crate::FieldReader<u8>);
 impl STATE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         STATE_R(crate::FieldReader::new(bits))
     }
@@ -119,7 +120,7 @@ impl STATE_R {
     }
 }
 impl core::ops::Deref for STATE_R {
-    type Target = crate::FieldReader<u8, STATE_A>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -140,8 +141,9 @@ impl From<ENABLE_A> for bool {
     }
 }
 #[doc = "Field `ENABLE` reader - Enable status of the controller"]
-pub struct ENABLE_R(crate::FieldReader<bool, ENABLE_A>);
+pub struct ENABLE_R(crate::FieldReader<bool>);
 impl ENABLE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ENABLE_R(crate::FieldReader::new(bits))
     }
@@ -165,7 +167,7 @@ impl ENABLE_R {
     }
 }
 impl core::ops::Deref for ENABLE_R {
-    type Target = crate::FieldReader<bool, ENABLE_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -180,7 +182,7 @@ impl R {
     #[doc = "Bit 0 - Enable status of the controller"]
     #[inline(always)]
     pub fn enable(&self) -> ENABLE_R {
-        ENABLE_R::new((self.bits & 0x01) != 0)
+        ENABLE_R::new((self.bits & 1) != 0)
     }
 }
 #[doc = "DMA status register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [status](index.html) module"]

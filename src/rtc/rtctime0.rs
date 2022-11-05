@@ -15,14 +15,15 @@ impl From<crate::R<RTCTIME0_SPEC>> for R {
 }
 #[doc = "Field `CBCDDAY` reader - CBCDDAY\\[27:24\\]
 bits ( RTC Consolidated Day of Week value (1 to 7))"]
-pub struct CBCDDAY_R(crate::FieldReader<u8, u8>);
+pub struct CBCDDAY_R(crate::FieldReader<u8>);
 impl CBCDDAY_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         CBCDDAY_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for CBCDDAY_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -30,14 +31,15 @@ impl core::ops::Deref for CBCDDAY_R {
 }
 #[doc = "Field `CBCDHOUR` reader - CBCDHOUR\\[21:16\\]
 bits (RTC Consolidated Hour value (0 to 23))"]
-pub struct CBCDHOUR_R(crate::FieldReader<u8, u8>);
+pub struct CBCDHOUR_R(crate::FieldReader<u8>);
 impl CBCDHOUR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         CBCDHOUR_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for CBCDHOUR_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -45,14 +47,15 @@ impl core::ops::Deref for CBCDHOUR_R {
 }
 #[doc = "Field `CBCDMIN` reader - CBCDMIN\\[14:8\\]
 bits (RTC Consolidated Minute value (0 to 59))"]
-pub struct CBCDMIN_R(crate::FieldReader<u8, u8>);
+pub struct CBCDMIN_R(crate::FieldReader<u8>);
 impl CBCDMIN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         CBCDMIN_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for CBCDMIN_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -60,14 +63,15 @@ impl core::ops::Deref for CBCDMIN_R {
 }
 #[doc = "Field `CBCDSEC` reader - CBCDSEC\\[6:0\\]
 bits (RTC Consolidated Second value (0 to 59))"]
-pub struct CBCDSEC_R(crate::FieldReader<u8, u8>);
+pub struct CBCDSEC_R(crate::FieldReader<u8>);
 impl CBCDSEC_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         CBCDSEC_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for CBCDSEC_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

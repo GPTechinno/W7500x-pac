@@ -28,8 +28,9 @@ impl From<RI_A> for bool {
     }
 }
 #[doc = "Field `RI` reader - Ring indicator"]
-pub struct RI_R(crate::FieldReader<bool, RI_A>);
+pub struct RI_R(crate::FieldReader<bool>);
 impl RI_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RI_R(crate::FieldReader::new(bits))
     }
@@ -53,7 +54,7 @@ impl RI_R {
     }
 }
 impl core::ops::Deref for RI_R {
-    type Target = crate::FieldReader<bool, RI_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -74,8 +75,9 @@ impl From<TXFE_A> for bool {
     }
 }
 #[doc = "Field `TXFE` reader - Transmit FIFO empty"]
-pub struct TXFE_R(crate::FieldReader<bool, TXFE_A>);
+pub struct TXFE_R(crate::FieldReader<bool>);
 impl TXFE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TXFE_R(crate::FieldReader::new(bits))
     }
@@ -99,7 +101,7 @@ impl TXFE_R {
     }
 }
 impl core::ops::Deref for TXFE_R {
-    type Target = crate::FieldReader<bool, TXFE_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -120,8 +122,9 @@ impl From<RXFF_A> for bool {
     }
 }
 #[doc = "Field `RXFF` reader - Receive FIFO full"]
-pub struct RXFF_R(crate::FieldReader<bool, RXFF_A>);
+pub struct RXFF_R(crate::FieldReader<bool>);
 impl RXFF_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RXFF_R(crate::FieldReader::new(bits))
     }
@@ -145,7 +148,7 @@ impl RXFF_R {
     }
 }
 impl core::ops::Deref for RXFF_R {
-    type Target = crate::FieldReader<bool, RXFF_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -166,8 +169,9 @@ impl From<TXFF_A> for bool {
     }
 }
 #[doc = "Field `TXFF` reader - Transmit FIFO fULl"]
-pub struct TXFF_R(crate::FieldReader<bool, TXFF_A>);
+pub struct TXFF_R(crate::FieldReader<bool>);
 impl TXFF_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TXFF_R(crate::FieldReader::new(bits))
     }
@@ -191,7 +195,7 @@ impl TXFF_R {
     }
 }
 impl core::ops::Deref for TXFF_R {
-    type Target = crate::FieldReader<bool, TXFF_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -212,8 +216,9 @@ impl From<RXFE_A> for bool {
     }
 }
 #[doc = "Field `RXFE` reader - Receive FIFO empty"]
-pub struct RXFE_R(crate::FieldReader<bool, RXFE_A>);
+pub struct RXFE_R(crate::FieldReader<bool>);
 impl RXFE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RXFE_R(crate::FieldReader::new(bits))
     }
@@ -237,7 +242,7 @@ impl RXFE_R {
     }
 }
 impl core::ops::Deref for RXFE_R {
-    type Target = crate::FieldReader<bool, RXFE_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -256,8 +261,9 @@ impl From<BUSY_A> for bool {
     }
 }
 #[doc = "Field `BUSY` reader - UART busy"]
-pub struct BUSY_R(crate::FieldReader<bool, BUSY_A>);
+pub struct BUSY_R(crate::FieldReader<bool>);
 impl BUSY_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         BUSY_R(crate::FieldReader::new(bits))
     }
@@ -276,7 +282,7 @@ impl BUSY_R {
     }
 }
 impl core::ops::Deref for BUSY_R {
-    type Target = crate::FieldReader<bool, BUSY_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -295,8 +301,9 @@ impl From<DCD_A> for bool {
     }
 }
 #[doc = "Field `DCD` reader - Data carrier detect"]
-pub struct DCD_R(crate::FieldReader<bool, DCD_A>);
+pub struct DCD_R(crate::FieldReader<bool>);
 impl DCD_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         DCD_R(crate::FieldReader::new(bits))
     }
@@ -315,7 +322,7 @@ impl DCD_R {
     }
 }
 impl core::ops::Deref for DCD_R {
-    type Target = crate::FieldReader<bool, DCD_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -334,8 +341,9 @@ impl From<DSR_A> for bool {
     }
 }
 #[doc = "Field `DSR` reader - Data set ready"]
-pub struct DSR_R(crate::FieldReader<bool, DSR_A>);
+pub struct DSR_R(crate::FieldReader<bool>);
 impl DSR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         DSR_R(crate::FieldReader::new(bits))
     }
@@ -354,7 +362,7 @@ impl DSR_R {
     }
 }
 impl core::ops::Deref for DSR_R {
-    type Target = crate::FieldReader<bool, DSR_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -373,8 +381,9 @@ impl From<CTS_A> for bool {
     }
 }
 #[doc = "Field `CTS` reader - Clear to send"]
-pub struct CTS_R(crate::FieldReader<bool, CTS_A>);
+pub struct CTS_R(crate::FieldReader<bool>);
 impl CTS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CTS_R(crate::FieldReader::new(bits))
     }
@@ -393,7 +402,7 @@ impl CTS_R {
     }
 }
 impl core::ops::Deref for CTS_R {
-    type Target = crate::FieldReader<bool, CTS_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -403,47 +412,47 @@ impl R {
     #[doc = "Bit 8 - Ring indicator"]
     #[inline(always)]
     pub fn ri(&self) -> RI_R {
-        RI_R::new(((self.bits >> 8) & 0x01) != 0)
+        RI_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 7 - Transmit FIFO empty"]
     #[inline(always)]
     pub fn txfe(&self) -> TXFE_R {
-        TXFE_R::new(((self.bits >> 7) & 0x01) != 0)
+        TXFE_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 6 - Receive FIFO full"]
     #[inline(always)]
     pub fn rxff(&self) -> RXFF_R {
-        RXFF_R::new(((self.bits >> 6) & 0x01) != 0)
+        RXFF_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 5 - Transmit FIFO fULl"]
     #[inline(always)]
     pub fn txff(&self) -> TXFF_R {
-        TXFF_R::new(((self.bits >> 5) & 0x01) != 0)
+        TXFF_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 4 - Receive FIFO empty"]
     #[inline(always)]
     pub fn rxfe(&self) -> RXFE_R {
-        RXFE_R::new(((self.bits >> 4) & 0x01) != 0)
+        RXFE_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 3 - UART busy"]
     #[inline(always)]
     pub fn busy(&self) -> BUSY_R {
-        BUSY_R::new(((self.bits >> 3) & 0x01) != 0)
+        BUSY_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 2 - Data carrier detect"]
     #[inline(always)]
     pub fn dcd(&self) -> DCD_R {
-        DCD_R::new(((self.bits >> 2) & 0x01) != 0)
+        DCD_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 1 - Data set ready"]
     #[inline(always)]
     pub fn dsr(&self) -> DSR_R {
-        DSR_R::new(((self.bits >> 1) & 0x01) != 0)
+        DSR_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 0 - Clear to send"]
     #[inline(always)]
     pub fn cts(&self) -> CTS_R {
-        CTS_R::new((self.bits & 0x01) != 0)
+        CTS_R::new((self.bits & 1) != 0)
     }
 }
 #[doc = "Flags\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [fr](index.html) module"]

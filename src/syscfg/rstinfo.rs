@@ -35,14 +35,15 @@ impl From<crate::W<RSTINFO_SPEC>> for W {
     }
 }
 #[doc = "Field `SYS` reader - Reset Request Enable"]
-pub struct SYS_R(crate::FieldReader<bool, bool>);
+pub struct SYS_R(crate::FieldReader<bool>);
 impl SYS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SYS_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for SYS_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -66,19 +67,20 @@ impl<'a> SYS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
 #[doc = "Field `RST` reader - Interrupt Enable"]
-pub struct RST_R(crate::FieldReader<bool, bool>);
+pub struct RST_R(crate::FieldReader<bool>);
 impl RST_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RST_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for RST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -102,7 +104,7 @@ impl<'a> RST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -110,12 +112,12 @@ impl R {
     #[doc = "Bit 0 - Reset Request Enable"]
     #[inline(always)]
     pub fn sys(&self) -> SYS_R {
-        SYS_R::new((self.bits & 0x01) != 0)
+        SYS_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Interrupt Enable"]
     #[inline(always)]
     pub fn rst(&self) -> RST_R {
-        RST_R::new(((self.bits >> 1) & 0x01) != 0)
+        RST_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
 impl W {

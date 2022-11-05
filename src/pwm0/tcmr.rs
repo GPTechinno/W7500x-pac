@@ -56,8 +56,9 @@ impl From<TCM_A> for u8 {
 }
 #[doc = "Field `TCM` reader - TCM\\[1:0\\]
 bits (Timer/Counter mode)"]
-pub struct TCM_R(crate::FieldReader<u8, TCM_A>);
+pub struct TCM_R(crate::FieldReader<u8>);
 impl TCM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         TCM_R(crate::FieldReader::new(bits))
     }
@@ -94,7 +95,7 @@ impl TCM_R {
     }
 }
 impl core::ops::Deref for TCM_R {
-    type Target = crate::FieldReader<u8, TCM_A>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -134,7 +135,7 @@ impl<'a> TCM_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03) | (value as u32 & 0x03);
+        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
         self.w
     }
 }
@@ -143,7 +144,7 @@ impl R {
 bits (Timer/Counter mode)"]
     #[inline(always)]
     pub fn tcm(&self) -> TCM_R {
-        TCM_R::new((self.bits & 0x03) as u8)
+        TCM_R::new((self.bits & 3) as u8)
     }
 }
 impl W {

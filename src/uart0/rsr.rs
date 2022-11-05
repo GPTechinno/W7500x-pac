@@ -26,8 +26,9 @@ impl From<OE_A> for bool {
     }
 }
 #[doc = "Field `OE` reader - Overrun Error"]
-pub struct OE_R(crate::FieldReader<bool, OE_A>);
+pub struct OE_R(crate::FieldReader<bool>);
 impl OE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         OE_R(crate::FieldReader::new(bits))
     }
@@ -46,7 +47,7 @@ impl OE_R {
     }
 }
 impl core::ops::Deref for OE_R {
-    type Target = crate::FieldReader<bool, OE_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -65,8 +66,9 @@ impl From<BE_A> for bool {
     }
 }
 #[doc = "Field `BE` reader - Break Error"]
-pub struct BE_R(crate::FieldReader<bool, BE_A>);
+pub struct BE_R(crate::FieldReader<bool>);
 impl BE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         BE_R(crate::FieldReader::new(bits))
     }
@@ -85,7 +87,7 @@ impl BE_R {
     }
 }
 impl core::ops::Deref for BE_R {
-    type Target = crate::FieldReader<bool, BE_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -104,8 +106,9 @@ impl From<PE_A> for bool {
     }
 }
 #[doc = "Field `PE` reader - Parity Error"]
-pub struct PE_R(crate::FieldReader<bool, PE_A>);
+pub struct PE_R(crate::FieldReader<bool>);
 impl PE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PE_R(crate::FieldReader::new(bits))
     }
@@ -124,7 +127,7 @@ impl PE_R {
     }
 }
 impl core::ops::Deref for PE_R {
-    type Target = crate::FieldReader<bool, PE_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -143,8 +146,9 @@ impl From<FE_A> for bool {
     }
 }
 #[doc = "Field `FE` reader - Framing Error"]
-pub struct FE_R(crate::FieldReader<bool, FE_A>);
+pub struct FE_R(crate::FieldReader<bool>);
 impl FE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         FE_R(crate::FieldReader::new(bits))
     }
@@ -163,7 +167,7 @@ impl FE_R {
     }
 }
 impl core::ops::Deref for FE_R {
-    type Target = crate::FieldReader<bool, FE_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -173,22 +177,22 @@ impl R {
     #[doc = "Bit 3 - Overrun Error"]
     #[inline(always)]
     pub fn oe(&self) -> OE_R {
-        OE_R::new(((self.bits >> 3) & 0x01) != 0)
+        OE_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 2 - Break Error"]
     #[inline(always)]
     pub fn be(&self) -> BE_R {
-        BE_R::new(((self.bits >> 2) & 0x01) != 0)
+        BE_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 1 - Parity Error"]
     #[inline(always)]
     pub fn pe(&self) -> PE_R {
-        PE_R::new(((self.bits >> 1) & 0x01) != 0)
+        PE_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 0 - Framing Error"]
     #[inline(always)]
     pub fn fe(&self) -> FE_R {
-        FE_R::new((self.bits & 0x01) != 0)
+        FE_R::new((self.bits & 1) != 0)
     }
 }
 #[doc = "Receive Status\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rsr](index.html) module"]

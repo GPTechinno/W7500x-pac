@@ -47,8 +47,9 @@ impl From<AMRYEAR_A> for bool {
     }
 }
 #[doc = "Field `AMRYEAR` reader - RTC Alarm Mask for Year"]
-pub struct AMRYEAR_R(crate::FieldReader<bool, AMRYEAR_A>);
+pub struct AMRYEAR_R(crate::FieldReader<bool>);
 impl AMRYEAR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         AMRYEAR_R(crate::FieldReader::new(bits))
     }
@@ -67,7 +68,7 @@ impl AMRYEAR_R {
     }
 }
 impl core::ops::Deref for AMRYEAR_R {
-    type Target = crate::FieldReader<bool, AMRYEAR_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -101,7 +102,7 @@ impl<'a> AMRYEAR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -118,8 +119,9 @@ impl From<AMRMON_A> for bool {
     }
 }
 #[doc = "Field `AMRMON` reader - RTC Alarm Mask for Month"]
-pub struct AMRMON_R(crate::FieldReader<bool, AMRMON_A>);
+pub struct AMRMON_R(crate::FieldReader<bool>);
 impl AMRMON_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         AMRMON_R(crate::FieldReader::new(bits))
     }
@@ -138,7 +140,7 @@ impl AMRMON_R {
     }
 }
 impl core::ops::Deref for AMRMON_R {
-    type Target = crate::FieldReader<bool, AMRMON_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -172,7 +174,7 @@ impl<'a> AMRMON_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -189,8 +191,9 @@ impl From<AMRDATE_A> for bool {
     }
 }
 #[doc = "Field `AMRDATE` reader - RTC Alarm Mask for Date"]
-pub struct AMRDATE_R(crate::FieldReader<bool, AMRDATE_A>);
+pub struct AMRDATE_R(crate::FieldReader<bool>);
 impl AMRDATE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         AMRDATE_R(crate::FieldReader::new(bits))
     }
@@ -209,7 +212,7 @@ impl AMRDATE_R {
     }
 }
 impl core::ops::Deref for AMRDATE_R {
-    type Target = crate::FieldReader<bool, AMRDATE_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -243,7 +246,7 @@ impl<'a> AMRDATE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -260,8 +263,9 @@ impl From<AMRDAY_A> for bool {
     }
 }
 #[doc = "Field `AMRDAY` reader - RTC Alarm Mask for Day"]
-pub struct AMRDAY_R(crate::FieldReader<bool, AMRDAY_A>);
+pub struct AMRDAY_R(crate::FieldReader<bool>);
 impl AMRDAY_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         AMRDAY_R(crate::FieldReader::new(bits))
     }
@@ -280,7 +284,7 @@ impl AMRDAY_R {
     }
 }
 impl core::ops::Deref for AMRDAY_R {
-    type Target = crate::FieldReader<bool, AMRDAY_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -314,7 +318,7 @@ impl<'a> AMRDAY_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -331,8 +335,9 @@ impl From<AMRHOUR_A> for bool {
     }
 }
 #[doc = "Field `AMRHOUR` reader - RTC Alarm Mask for Hour"]
-pub struct AMRHOUR_R(crate::FieldReader<bool, AMRHOUR_A>);
+pub struct AMRHOUR_R(crate::FieldReader<bool>);
 impl AMRHOUR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         AMRHOUR_R(crate::FieldReader::new(bits))
     }
@@ -351,7 +356,7 @@ impl AMRHOUR_R {
     }
 }
 impl core::ops::Deref for AMRHOUR_R {
-    type Target = crate::FieldReader<bool, AMRHOUR_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -385,7 +390,7 @@ impl<'a> AMRHOUR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -402,8 +407,9 @@ impl From<AMRMIN_A> for bool {
     }
 }
 #[doc = "Field `AMRMIN` reader - RTC Alarm Mask for Minute"]
-pub struct AMRMIN_R(crate::FieldReader<bool, AMRMIN_A>);
+pub struct AMRMIN_R(crate::FieldReader<bool>);
 impl AMRMIN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         AMRMIN_R(crate::FieldReader::new(bits))
     }
@@ -422,7 +428,7 @@ impl AMRMIN_R {
     }
 }
 impl core::ops::Deref for AMRMIN_R {
-    type Target = crate::FieldReader<bool, AMRMIN_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -456,7 +462,7 @@ impl<'a> AMRMIN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -473,8 +479,9 @@ impl From<AMRSEC_A> for bool {
     }
 }
 #[doc = "Field `AMRSEC` reader - RTC Alarm Mask for Second"]
-pub struct AMRSEC_R(crate::FieldReader<bool, AMRSEC_A>);
+pub struct AMRSEC_R(crate::FieldReader<bool>);
 impl AMRSEC_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         AMRSEC_R(crate::FieldReader::new(bits))
     }
@@ -493,7 +500,7 @@ impl AMRSEC_R {
     }
 }
 impl core::ops::Deref for AMRSEC_R {
-    type Target = crate::FieldReader<bool, AMRSEC_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -527,7 +534,7 @@ impl<'a> AMRSEC_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -535,37 +542,37 @@ impl R {
     #[doc = "Bit 6 - RTC Alarm Mask for Year"]
     #[inline(always)]
     pub fn amryear(&self) -> AMRYEAR_R {
-        AMRYEAR_R::new(((self.bits >> 6) & 0x01) != 0)
+        AMRYEAR_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 5 - RTC Alarm Mask for Month"]
     #[inline(always)]
     pub fn amrmon(&self) -> AMRMON_R {
-        AMRMON_R::new(((self.bits >> 5) & 0x01) != 0)
+        AMRMON_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 4 - RTC Alarm Mask for Date"]
     #[inline(always)]
     pub fn amrdate(&self) -> AMRDATE_R {
-        AMRDATE_R::new(((self.bits >> 4) & 0x01) != 0)
+        AMRDATE_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 3 - RTC Alarm Mask for Day"]
     #[inline(always)]
     pub fn amrday(&self) -> AMRDAY_R {
-        AMRDAY_R::new(((self.bits >> 3) & 0x01) != 0)
+        AMRDAY_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 2 - RTC Alarm Mask for Hour"]
     #[inline(always)]
     pub fn amrhour(&self) -> AMRHOUR_R {
-        AMRHOUR_R::new(((self.bits >> 2) & 0x01) != 0)
+        AMRHOUR_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 1 - RTC Alarm Mask for Minute"]
     #[inline(always)]
     pub fn amrmin(&self) -> AMRMIN_R {
-        AMRMIN_R::new(((self.bits >> 1) & 0x01) != 0)
+        AMRMIN_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 0 - RTC Alarm Mask for Second"]
     #[inline(always)]
     pub fn amrsec(&self) -> AMRSEC_R {
-        AMRSEC_R::new((self.bits & 0x01) != 0)
+        AMRSEC_R::new((self.bits & 1) != 0)
     }
 }
 impl W {

@@ -35,14 +35,15 @@ impl From<crate::W<CR1_SPEC>> for W {
     }
 }
 #[doc = "Field `SOD` reader - Slave-mode output disable"]
-pub struct SOD_R(crate::FieldReader<bool, bool>);
+pub struct SOD_R(crate::FieldReader<bool>);
 impl SOD_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SOD_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for SOD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -66,19 +67,20 @@ impl<'a> SOD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
 #[doc = "Field `MS` reader - Master or Slave mode select"]
-pub struct MS_R(crate::FieldReader<bool, bool>);
+pub struct MS_R(crate::FieldReader<bool>);
 impl MS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         MS_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for MS_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -102,19 +104,20 @@ impl<'a> MS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
 #[doc = "Field `SSE` reader - Synchronous serial port enable"]
-pub struct SSE_R(crate::FieldReader<bool, bool>);
+pub struct SSE_R(crate::FieldReader<bool>);
 impl SSE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SSE_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for SSE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -138,19 +141,20 @@ impl<'a> SSE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
 #[doc = "Field `LBM` reader - Loop back mode"]
-pub struct LBM_R(crate::FieldReader<bool, bool>);
+pub struct LBM_R(crate::FieldReader<bool>);
 impl LBM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         LBM_R(crate::FieldReader::new(bits))
     }
 }
 impl core::ops::Deref for LBM_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -174,7 +178,7 @@ impl<'a> LBM_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -182,22 +186,22 @@ impl R {
     #[doc = "Bit 3 - Slave-mode output disable"]
     #[inline(always)]
     pub fn sod(&self) -> SOD_R {
-        SOD_R::new(((self.bits >> 3) & 0x01) != 0)
+        SOD_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 2 - Master or Slave mode select"]
     #[inline(always)]
     pub fn ms(&self) -> MS_R {
-        MS_R::new(((self.bits >> 2) & 0x01) != 0)
+        MS_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 1 - Synchronous serial port enable"]
     #[inline(always)]
     pub fn sse(&self) -> SSE_R {
-        SSE_R::new(((self.bits >> 1) & 0x01) != 0)
+        SSE_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 0 - Loop back mode"]
     #[inline(always)]
     pub fn lbm(&self) -> LBM_R {
-        LBM_R::new((self.bits & 0x01) != 0)
+        LBM_R::new((self.bits & 1) != 0)
     }
 }
 impl W {

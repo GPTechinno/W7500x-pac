@@ -49,8 +49,9 @@ impl From<PLLOEN_A> for bool {
     }
 }
 #[doc = "Field `PLLOEN` reader - PLL output flag"]
-pub struct PLLOEN_R(crate::FieldReader<bool, PLLOEN_A>);
+pub struct PLLOEN_R(crate::FieldReader<bool>);
 impl PLLOEN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PLLOEN_R(crate::FieldReader::new(bits))
     }
@@ -74,7 +75,7 @@ impl PLLOEN_R {
     }
 }
 impl core::ops::Deref for PLLOEN_R {
-    type Target = crate::FieldReader<bool, PLLOEN_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -113,7 +114,7 @@ impl<'a> PLLOEN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -121,7 +122,7 @@ impl R {
     #[doc = "Bit 0 - PLL output flag"]
     #[inline(always)]
     pub fn plloen(&self) -> PLLOEN_R {
-        PLLOEN_R::new((self.bits & 0x01) != 0)
+        PLLOEN_R::new((self.bits & 1) != 0)
     }
 }
 impl W {

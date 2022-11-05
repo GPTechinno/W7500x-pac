@@ -49,8 +49,9 @@ impl From<CIE_A> for bool {
     }
 }
 #[doc = "Field `CIE` reader - Capture Interrupt Enable"]
-pub struct CIE_R(crate::FieldReader<bool, CIE_A>);
+pub struct CIE_R(crate::FieldReader<bool>);
 impl CIE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CIE_R(crate::FieldReader::new(bits))
     }
@@ -74,7 +75,7 @@ impl CIE_R {
     }
 }
 impl core::ops::Deref for CIE_R {
-    type Target = crate::FieldReader<bool, CIE_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -113,7 +114,7 @@ impl<'a> CIE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -132,8 +133,9 @@ impl From<OIE_A> for bool {
     }
 }
 #[doc = "Field `OIE` reader - Overflow Interrupt Enable"]
-pub struct OIE_R(crate::FieldReader<bool, OIE_A>);
+pub struct OIE_R(crate::FieldReader<bool>);
 impl OIE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         OIE_R(crate::FieldReader::new(bits))
     }
@@ -157,7 +159,7 @@ impl OIE_R {
     }
 }
 impl core::ops::Deref for OIE_R {
-    type Target = crate::FieldReader<bool, OIE_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -196,7 +198,7 @@ impl<'a> OIE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -215,8 +217,9 @@ impl From<MIE_A> for bool {
     }
 }
 #[doc = "Field `MIE` reader - Match Interrupt Enable"]
-pub struct MIE_R(crate::FieldReader<bool, MIE_A>);
+pub struct MIE_R(crate::FieldReader<bool>);
 impl MIE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         MIE_R(crate::FieldReader::new(bits))
     }
@@ -240,7 +243,7 @@ impl MIE_R {
     }
 }
 impl core::ops::Deref for MIE_R {
-    type Target = crate::FieldReader<bool, MIE_A>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -279,7 +282,7 @@ impl<'a> MIE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -287,17 +290,17 @@ impl R {
     #[doc = "Bit 2 - Capture Interrupt Enable"]
     #[inline(always)]
     pub fn cie(&self) -> CIE_R {
-        CIE_R::new(((self.bits >> 2) & 0x01) != 0)
+        CIE_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 1 - Overflow Interrupt Enable"]
     #[inline(always)]
     pub fn oie(&self) -> OIE_R {
-        OIE_R::new(((self.bits >> 1) & 0x01) != 0)
+        OIE_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 0 - Match Interrupt Enable"]
     #[inline(always)]
     pub fn mie(&self) -> MIE_R {
-        MIE_R::new((self.bits & 0x01) != 0)
+        MIE_R::new((self.bits & 1) != 0)
     }
 }
 impl W {
